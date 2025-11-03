@@ -406,18 +406,7 @@ table 7001114 Resource3
         {
             Caption = 'Fecha baja';
             DataClassification = ToBeClassified;
-            trigger OnValidate()
-            VAR
-                rAct: Record 5600;
-                CCod: Codeunit ControlProcesos;
-            BEGIN
-                rAct.SETRANGE(rAct.Recurso, "No.");
-                if rAct.FINDFIRST THEN BEGIN
-                    // MESSAGE('Este recurso tiene un activo relacionado. Se va a dar de baja');
-                    CLEAR(CCod);
-                    CCod.Baja(rAct."No.", "No.");
-                END;
-            END;
+
             //Description=$004 
         }
         field(50001; "Categoria"; Enum "Categoria")

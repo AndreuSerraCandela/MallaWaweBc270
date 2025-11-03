@@ -239,7 +239,7 @@ table 7001131 "Cab. orden publicidad"
         rCli: Record Customer;
         rMedios: Record Vendor;
         rConcepto: Record 156;
-        cMedios: Codeunit "Gestion medios";
+
 #if CLEAN24
 #pragma warning disable AL0432
         cNoSeriesMgt: Codeunit NoSeriesManagement;
@@ -444,47 +444,6 @@ table 7001131 "Cab. orden publicidad"
                         rTarOrden.INSERT;
                     END;
                 UNTIL rDiasTar.NEXT = 0;
-        END;
-    END;
-
-    PROCEDURE ActualizarLineas(pActualizarTarifas: Boolean): Boolean;
-    VAR
-        wOpciones: Option Cancelar,Recalcular,Eliminar;
-        txt01: Label 'Recalcular lineas,Eliminar lineas';
-    BEGIN
-
-        rLinOrden.RESET;
-        rLinOrden.SETRANGE("Tipo orden", "Tipo orden");
-        rLinOrden.SETRANGE("No. orden", No);
-        rLinOrden.SETRANGE(rLinOrden."Importe manual", FALSE);
-        if rLinOrden.FIND('-') THEN BEGIN
-
-            wOpciones := STRMENU(txt01);
-
-            CASE wOpciones OF
-                wOpciones::Cancelar:
-                    EXIT(FALSE);
-                wOpciones::Recalcular:
-                    BEGIN
-                        rLinOrden.DELETEALL;
-                        if pActualizarTarifas THEN
-                            CopiaTarifasTamaño;
-                        cMedios.GenerarLineasOrden(Rec, 0D, 0D, 0);  // Genera todas las lineas otra vez
-                        EXIT(TRUE);
-                    END;
-                wOpciones::Eliminar:
-                    BEGIN
-                        rLinOrden.DELETEALL(TRUE);
-                        if pActualizarTarifas THEN
-                            CopiaTarifasTamaño;
-                        EXIT(TRUE);
-                    END;
-            END;
-        END
-        ELSE BEGIN
-            if pActualizarTarifas THEN
-                CopiaTarifasTamaño;
-            EXIT(TRUE);
         END;
     END;
 

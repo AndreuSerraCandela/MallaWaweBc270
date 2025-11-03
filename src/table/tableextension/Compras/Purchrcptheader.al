@@ -93,14 +93,7 @@ tableextension 80173 "Purch. Rcpt. HeaderKuara" extends "Purch. Rcpt. Header"
 
         }
     }
-    trigger OnAfterDelete()
-    var
-        Control: Codeunit "ControlProcesos";
-    begin
-        if Contabilizado then
-            Control.BORRCAALB();
 
-    end;
 
     procedure DescripcionProyecto(OrderNo: Code[20]): Text
     var

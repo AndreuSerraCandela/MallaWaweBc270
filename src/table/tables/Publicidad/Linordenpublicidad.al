@@ -93,7 +93,7 @@ table 7001135 "Lin. orden publicidad"
     VAR
         rOrdenes: Record "Cab. orden publicidad";
         rDiasOrden: Record "Dias orden publicidad";
-        cMedios: Codeunit "Gestion medios";
+
         wDia: Date;
         Err01: Label 'No es posible eliminar una linea facturada.';
 
@@ -124,8 +124,7 @@ table 7001135 "Lin. orden publicidad"
                 rDiasOrden.DELETE;
 
         // Si la linea borrada formaba parte de una tarifa conjunto debemos recalcular el importe de las lineas
-        if "Dia conjunto" <> 0D THEN
-            RecalcularConjunto;
+
     END;
 
     PROCEDURE UltLinea(): Integer;
@@ -155,29 +154,7 @@ table 7001135 "Lin. orden publicidad"
         //  Importe := ROUND(Importe + (Importe * Recargo / 100),0.01);
     END;
 
-    PROCEDURE RecalcularConjunto();
-    VAR
-        rOrden: Record "Cab. orden publicidad";
-        rLinOrden: Record "Lin. orden publicidad";
-        wFechaIni: Date;
-        wFechaFin: Date;
-    BEGIN
 
-        rLinOrden.RESET;
-        rLinOrden.SETRANGE("Tipo orden", "Tipo orden");
-        rLinOrden.SETRANGE("No. orden", "No. orden");
-        rLinOrden.SETFILTER("No. linea", '<>%1', "No. linea");              // Recalcular todas las lineas excepto la que borramos
-        rLinOrden.SETRANGE("Dia conjunto", "Dia conjunto");
-        if rLinOrden.FIND('-') THEN
-            wFechaIni := rLinOrden."Fecha inicio";
-        if rLinOrden.FIND('+') THEN
-            wFechaFin := rLinOrden."Fecha inicio";
-        if (wFechaIni <> 0D) AND (wFechaFin <> 0D) THEN BEGIN
-            rLinOrden.DELETEALL;
-            if rOrden.GET("No. orden") THEN
-                cMedios.GenerarLineasOrden(rOrden, wFechaIni, wFechaFin, 0);
-        END;
-    END;
 
     PROCEDURE GetDiasInsercion(VAR pTextoDias: Text[60]): Integer;
     VAR

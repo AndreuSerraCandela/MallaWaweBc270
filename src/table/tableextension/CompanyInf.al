@@ -147,46 +147,14 @@ tableextension 80108 EmpresaKuara extends "Company Information"
         }
         field(92004; "Instalación En Curso"; boolean)
         {
-            trigger OnValidate()
-            var
-                Control: Codeunit "Controlprocesos";
-                Emp: Record Company;
-                Info: Record 79;
-            begin
-                Emp.SetFilter(Name, '<>%1', Emp.Name);
-                If Emp.FindSet() then
-                    repeat
-                        if control.Permiso_Empresas(Emp.Name) then begin
 
-                            Info.ChangeCompany(Emp.Name);
-                            info.get();
-                            info."Instalación En Curso" := "Instalación En Curso";
-                            info.modify();
-                        end;
-                    until Emp.Next() = 0;
-            end;
+
         }
         field(92005; "Mensaje General"; Text[250])
         {
 
 
-            trigger OnValidate()
-            var
-                Control: Codeunit "Controlprocesos";
-                Emp: Record Company;
-                Info: Record 79;
-            begin
-                Emp.SetFilter(Name, '<>%1', Emp.Name);
-                If Emp.FindSet() then
-                    repeat
-                        if control.Permiso_Empresas(Emp.Name) then begin
-                            Info.ChangeCompany(Emp.Name);
-                            info.get();
-                            info."Mensaje General" := "Mensaje General";
-                            info.modify();
-                        end;
-                    until Emp.Next() = 0;
-            end;
+
         }
         field(92006; "Mensaje Empresa"; Text[250])
         {

@@ -65,6 +65,11 @@ table 7001101 "Tipo Recurso"
             Caption = '% Dto. Compra';
             DataClassification = ToBeClassified;
         }
+        field(12; "Tiene Medidas"; Boolean)
+        {
+            Caption = 'Tiene Medidas';
+            DataClassification = ToBeClassified;
+        }
     }
     keys
     {

@@ -201,7 +201,6 @@ table 7001195 "Produccines Relacionadas"
         UOMMgt: Codeunit 5402;
         ResFindUnitCost: Codeunit "Price Calculation - V16";//220;
         ItemCheckAvail: Codeunit 311;
-        Gest_Rvas: Codeunit ControlProcesos;
         CurrencyDate: Date;
         DontUseCostFactor: Boolean;
         wP: Decimal;

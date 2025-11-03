@@ -457,20 +457,7 @@ tableextension 80102 SalesHeaderKuara extends "Sales Header"
         }
         field(50088; "Fecha Estado"; Date)
         {
-            trigger OnValidate()
-            VAR
-                Gest_Fac: Codeunit "Gestion Facturación";
-            BEGIN
-                rConfigProy.GET();
-                if NOT rConfigProy."Poder modificar fecha firmado" THEN BEGIN
-                    if (("Fecha Estado" <> xRec."Fecha Estado") AND
-                        (xRec."Fecha Estado" <> 0D)) THEN
-                        ERROR(Text062);
 
-                END;
-                if ("Fecha Estado" <> xRec."Fecha Estado") Then
-                    Gest_Fac.EnviarMailJm("No.", STRSUBSTNO('modificado la fecha estado de %1 a %2', xRec."Fecha Estado", "Fecha Estado"));
-            END;
 
         }
         field(50089; "Remesa sin factura"; Boolean) { Description = '$003'; }

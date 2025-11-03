@@ -237,19 +237,7 @@ tableextension 80105 PurchaseHeaderKuara extends "Purchase Header"
     /// RenoveDocument.
     /// </summary>
     /// <returns>Return value of type Code[20].</returns>
-    procedure RenoveDocument(): Code[20]
-    var
-        CopyPurchaseDocument: Report "Renove Purchase Document";
-        IsHandled: Boolean;
-    begin
-        IsHandled := false;
-        if IsHandled then
-            exit;
 
-        CopyPurchaseDocument.SetPurchHeader(Rec);
-        CopyPurchaseDocument.RunModal();
-        exit(CopyPurchaseDocument.GetNo());
-    end;
 
     procedure Navigate()
     var

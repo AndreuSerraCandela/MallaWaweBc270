@@ -14,18 +14,7 @@ tableextension 80112 ResourceKuara extends Resource
         {
             Caption = 'Fecha baja';
             DataClassification = ToBeClassified;
-            trigger OnValidate()
-            VAR
-                rAct: Record 5600;
-                CCod: Codeunit ControlProcesos;
-            BEGIN
-                rAct.SETRANGE(rAct.Recurso, "No.");
-                if rAct.FINDFIRST THEN BEGIN
-                    // MESSAGE('Este recurso tiene un activo relacionado. Se va a dar de baja');
-                    CLEAR(CCod);
-                    CCod.Baja(rAct."No.", "No.");
-                END;
-            END;
+
             //Description=$004 
         }
         field(50001; "Categoria"; Enum "Categoria")
@@ -294,56 +283,6 @@ tableextension 80112 ResourceKuara extends Resource
             VALIDATE("Clave orden", "No.");
         END;
     END;
-
-    Procedure TrasladaOtrasEmpresas()
-    Var
-        rRes: Record Resource;
-        Control: Codeunit ControlProcesos;
-    begin
-        //rEmp.SETRANGE(rEmp.InterEmpresas,TRUE);
-
-        rEmp.SETFILTER(rEmp.Name, '<>%1', COMPANYNAME);
-        rEmp.SetRange("Evaluation Company", false);
-        if rEmp.FINDFIRST THEN
-            REPEAT
-                if Control.Permiso_Empresas(rEmp.Name) then begin
-                    rInf.CHANGECOMPANY(rEmp.Name);
-                    if rInf.Get() then begin
-                        if rInf.InterEmpresas = true Then begin
-                            rRes.CHANGECOMPANY(rEmp.Name);
-                            if rRes.GET("No.") THEN rRes.DELETE;
-                            rRes := Rec;
-                            rRes.INSERT;
-                        End;
-                    end;
-                end;
-            UNTIL rEmp.NEXT = 0;
-    end;
-
-    Procedure BorraOtrasEmpresas()
-    var
-        rRes: Record Resource;
-        Control: Codeunit ControlProcesos;
-    begin
-        //rEmp.SETRANGE(rEmp.InterEmpresas,TRUE);
-        rEmp.SETFILTER(rEmp.Name, '<>%1', COMPANYNAME);
-        rEmp.SetRange("Evaluation Company", false);
-
-        if rEmp.FINDFIRST THEN
-            REPEAT
-                if Control.Permiso_Empresas(rEmp.Name) then begin
-                    rInf.CHANGECOMPANY(rEmp.Name);
-                    if rInf.Get() then begin
-                        if rInf.InterEmpresas then begin
-                            if rRes.GET("No.") THEN rRes.DELETE;
-                            // rRes:=Rec;
-                            // rRes:=Rec;
-                        end;
-                    end;          // rRes.INSERT;
-                end;
-            UNTIL rEmp.NEXT = 0;
-    end;
-
 }
 // tableextension 80117 ResourceKuaraExt extends Resource3
 // {

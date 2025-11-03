@@ -10,7 +10,7 @@ tableextension 80223 "Dimension ValueKuara" extends "Dimension Value"
         field(50003; Agrupacion; Code[20])
         {
             TableRelation = "Dimension Value";
-            ValidateTableRelation=false;
+            ValidateTableRelation = false;
             trigger OnLookup()
             var
                 DimVal: Record "Dimension Value";
@@ -23,59 +23,5 @@ tableextension 80223 "Dimension ValueKuara" extends "Dimension Value"
             end;
         }
     }
-    trigger OnAfterInsert()
-    var
-        Company: Record Company;
-        DimVal: Record "Dimension Value";
 
-    begin
-        if Company.FindFirst() Then begin
-            if Company.Name <> CompanyName Then
-                repeat
-                    If Control.Permiso_Empresas(Company.Name) Then begin
-                        DimVal.ChangeCompany(Company.Name);
-                        if DimVal.get(Rec."Dimension Code", Rec.Code) Then DimVal.Delete();
-                        DimVal := Rec;
-                        if DimVal.Insert Then;
-                    end;
-                Until Company.Next() = 0;
-        end;
-    end;
-
-    trigger OnAfterModify()
-    var
-        Company: Record Company;
-        DimVal: Record "Dimension Value";
-    begin
-        if Company.FindFirst() Then begin
-            if Company.Name <> CompanyName Then
-                repeat
-                    If Control.Permiso_Empresas(Company.Name) Then begin
-                        DimVal.ChangeCompany(Company.Name);
-                        if DimVal.get(Rec."Dimension Code", Rec.Code) Then DimVal.Delete();
-                        DimVal := Rec;
-                        if DimVal.Insert Then;
-                    end;
-                Until Company.Next() = 0;
-        end;
-    end;
-
-    trigger OnAfterDelete()
-    var
-        Company: Record Company;
-        DimVal: Record "Dimension Value";
-    begin
-        if Company.FindFirst() Then begin
-            if Company.Name <> CompanyName Then
-                repeat
-                    If Control.Permiso_Empresas(Company.Name) Then begin
-                        DimVal.ChangeCompany(Company.Name);
-                        if DimVal.get(Rec."Dimension Code", Rec.Code) Then DimVal.Delete();
-                    end;
-                Until Company.Next() = 0;
-        end;
-    end;
-
-    var
-        Control: Codeunit ControlProcesos;
 }

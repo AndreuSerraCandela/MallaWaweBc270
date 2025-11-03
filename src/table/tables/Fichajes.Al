@@ -1,10 +1,9 @@
-/// <summary>
-/// Table Fichajes (ID 7001152).
-/// </summary>
-table 80152 Fichajes
+table 7001153 Punches
 {
-    ObsoleteState = Removed;
-
+    DataPerCompany = false;
+    Caption = 'Fichajes';
+    LookupPageId = Fichajes;
+    DrillDownPageId = Fichajes;
     DataClassification = ToBeClassified;
 
     fields
@@ -25,7 +24,7 @@ table 80152 Fichajes
             DataClassification = ToBeClassified;
             OptionMembers = Entrada,Salida;
         }
-        field(4; evento; Text[20])
+        field(4; evento; Text[30])
         {
 
         }
@@ -49,6 +48,10 @@ table 80152 Fichajes
         {
 
         }
+        field(10; Ventas; Decimal)
+        {
+
+        }
     }
     keys
     {
@@ -58,4 +61,3 @@ table 80152 Fichajes
         }
     }
 }
-

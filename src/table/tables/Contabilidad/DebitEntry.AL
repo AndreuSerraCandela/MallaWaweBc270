@@ -308,7 +308,7 @@ table 7001115 "Direct Debit Collection Malla"
         IsHandled := false;
         OnBeforeCheckSEPA(Rec, IsHandled);
         if not IsHandled then
-            CODEUNIT.Run(CODEUNIT::"SEPA DD-Check Line Malla", Rec);
+            CODEUNIT.Run(7001104, Rec);//CODEUNIT::"SEPA DD-Check Line Malla"
     end;
 
     /// <summary>
@@ -414,15 +414,15 @@ table 7001115 "Direct Debit Collection Malla"
             exit;
 
         if DirectDebitCollection.Get("Direct Debit Collection No.") then begin
-            
+
             if DirectDebitCollection."Source Table ID" <> 0 then begin
                 GenJnlLine."Journal Template Name" := '';
                 GenJnlLine."Journal Batch Name" := Format(DirectDebitCollection."Source Table ID");
                 GenJnlLine."Document No." := DirectDebitCollection.Identifier;
-                
+
             end else
-            GenJnlLine."Document No." := CopyStr(Format(DirectDebitCollection."No."), 1, MaxStrLen(GenJnlLine."Document No."));
-         end;
+                GenJnlLine."Document No." := CopyStr(Format(DirectDebitCollection."No."), 1, MaxStrLen(GenJnlLine."Document No."));
+        end;
         //DirectDebitCollection.SetGenJnlLineMapping(GenJnlLine);
         GenJnlLine."Line No." := "Entry No.";
     end;
@@ -461,7 +461,7 @@ table 7001115 "Direct Debit Collection Malla"
             repeat
                 DirectDebitCollectionEntry.Validate("Transfer Date", Today());
                 DirectDebitCollectionEntry.Modify(true);
-                Codeunit.Run(Codeunit::"SEPA DD-Check Line Malla", DirectDebitCollectionEntry);
+                Codeunit.Run(7001104, DirectDebitCollectionEntry);//CODEUNIT::"SEPA DD-Check Line Malla"
             until DirectDebitCollectionEntry.Next() = 0;
     end;
 
