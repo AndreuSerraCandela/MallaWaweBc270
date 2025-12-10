@@ -28,9 +28,9 @@ controladdin MyTimer
     event ControlAddInReady();
 
     /// <summary>
-    /// PingPongError.
+    /// TimerError.
     /// </summary>
-    event PingPongError();
+    event TimerError(errorMessage: Text);
 
     /// <summary>
     /// TimerElapsed.

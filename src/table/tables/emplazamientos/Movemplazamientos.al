@@ -152,7 +152,7 @@ table 7001105 "Mov. emplazamientos"
             trigger OnValidate()
             BEGIN
                 Rec.VALIDATE("Importe pagado", (Rec."Importe total" - Rec."Importe pendiente"));
-                Rec."Importe Pendiente S/Iva" := (Rec."Importe pendiente" / (1 + Rec."% IVA" / 100));
+                Rec."Importe Pendiente S/Iva" := (Rec."Importe pendiente" / (1 + Rec."% IVA" / 100 - Rec."% IRPF" / 100));
             END;
         }
         field(90; "Fecha pago"; Date) { }
@@ -162,12 +162,12 @@ table 7001105 "Mov. emplazamientos"
             BEGIN
                 if Rec."Importe pagado" = 0 THEN BEGIN
                     Rec."Importe pendiente" := Rec."Importe total";
-                    Rec."Importe Pendiente S/Iva" := (Rec."Importe pendiente" / (1 + Rec."% IVA" / 100));
+                    Rec."Importe Pendiente S/Iva" := (Rec."Importe pendiente" / (1 + Rec."% IVA" / 100 - Rec."% IRPF" / 100));
                     EXIT;
                 END;
                 Rec."Fecha pago" := TODAY;
                 Rec."Importe pendiente" := Rec."Importe total" - Rec."Importe pagado";
-                Rec."Importe Pendiente S/Iva" := (Rec."Importe pendiente" / (1 + Rec."% IVA" / 100));
+                Rec."Importe Pendiente S/Iva" := (Rec."Importe pendiente" / (1 + Rec."% IVA" / 100 - Rec."% IRPF" / 100));
                 if Rec."Importe pendiente" = 0 THEN
                     Rec.Estado := Rec.Estado::Pagado;
             END;
@@ -292,12 +292,12 @@ table 7001105 "Mov. emplazamientos"
             begin
                 if Rec."Regularización" = 0 THEN BEGIN
                     Rec."Importe pendiente" := Rec."Importe total";
-                    Rec."Importe Pendiente S/Iva" := (Rec."Importe pendiente" / (1 + Rec."% IVA" / 100));
+                    Rec."Importe Pendiente S/Iva" := (Rec."Importe pendiente" / (1 + Rec."% IVA" / 100 - Rec."% IRPF" / 100));
                     EXIT;
                 END;
                 Rec."Fecha pago" := TODAY;
                 Rec."Importe pendiente" := Rec."Importe total" - Rec."Regularización";
-                Rec."Importe Pendiente S/Iva" := (Rec."Importe pendiente" / (1 + Rec."% IVA" / 100));
+                Rec."Importe Pendiente S/Iva" := (Rec."Importe pendiente" / (1 + Rec."% IVA" / 100 - Rec."% IRPF" / 100));
                 if Rec."Importe pendiente" = 0 THEN
                     Rec.Estado := Rec.Estado::Regularizado;
             end;

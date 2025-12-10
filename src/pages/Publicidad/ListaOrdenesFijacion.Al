@@ -538,6 +538,8 @@ page 7001179 "Imagenes Orden fijacion"
                     FileExtension := StrSubstNo(FileExtensionLbl, Rec."Extension");
 
                     if DocumentServiceMgt.EditInOneDriveFromMedia(FileName, FileExtension, Rec.Image.MediaId()) then begin
+                        If Rec.Nombre = '' Then Rec.Nombre := FileName;
+                        If Rec.Nombre = '' Then Error('El nombre del archivo no puede estar vacío');
                         Rec.Modify();
                     end;
                 end;

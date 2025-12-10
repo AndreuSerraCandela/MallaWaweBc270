@@ -4483,6 +4483,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Imagenes Orden fijación - Field Qr Retirada - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1536195842 - Field 900282570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>RrcorIdDocAcct</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Imagenes Orden fijación - Field RrcorIdDocAcct - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1536195842 - Field 2883740582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tipo</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -10963,6 +10968,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Tipo Recurso - Field Gen. Prod. Posting Group - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3168735431 - Field 4236929209 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ocultar Tipo Recurso</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Tipo Recurso - Field Ocultar Tipo Recurso - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3168735431 - Field 242107751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Ruta Imagenes</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -16002,6 +16012,11 @@
           <source>Combinación Dimensiones</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Tabla Tipo Recurso - Action Combinación Dimensiones - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3023812073 - Action 1959563652 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copiar desde otra empresa</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Tabla Tipo Recurso - Action Copiar desde otra empresa - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2862112301 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tarifas Publicidad</source>

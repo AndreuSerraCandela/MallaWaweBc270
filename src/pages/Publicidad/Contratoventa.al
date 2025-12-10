@@ -1376,7 +1376,7 @@ page 50013 "Ficha Contrato Venta"
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = true;
             }
-            part("Attached Documents"; "Document Attachment Factbox")
+            part("Attached Documents"; "Doc. Attachment List Factbox")
             {
                 ApplicationArea = All;
                 Caption = 'Documentos adjuntos';
@@ -1508,16 +1508,8 @@ page 50013 "Ficha Contrato Venta"
                     ShortCutKey = 'F7';
                     //ToolTip = 'View statistical information, such as the value of posted entries, for the record.';
 
-                    trigger OnAction()
-                    var
-                        Handled: Boolean;
-                    begin
-                        OnBeforeStatisticsAction(Rec, Handled);
-                        if not Handled then begin
-                            Rec.OpenSalesOrderStatistics;
-                            SalesCalcDiscountByType.ResetRecalculateInvoiceDisc(Rec);
-                        end
-                    end;
+                    RunObject = Page "Sales Order Statistics";
+                    RunPageOnRec = true;
                 }
                 action(Customer)
                 {
@@ -2682,9 +2674,10 @@ page 50013 "Ficha Contrato Venta"
                     trigger OnAction()
                     var
                         DemandOverview: Page "Demand Overview";
+                        "Demand Order Source Type": Enum "Demand Order Source Type";
                     begin
                         DemandOverview.SetCalculationParameter(true);
-                        DemandOverview.Initialize(0D, 1, Rec."No.", '', '');
+                        DemandOverview.SetParameters(0D, "Demand Order Source Type"::"All Demands", Rec."No.", '', '');
                         DemandOverview.RunModal;
                     end;
                 }
@@ -3703,10 +3696,7 @@ page 50013 "Ficha Contrato Venta"
 
     end;
 
-    [IntegrationEvent(false, false)]
-    local procedure OnBeforeStatisticsAction(var SalesHeader: Record "Sales Header"; var Handled: Boolean)
-    begin
-    end;
+
 
     /// <summary>
     /// CheckNotificationsOnce.
@@ -3801,6 +3791,7 @@ page 50013 "Ficha Contrato Venta"
         rMov: Record "g/l Entry";
         Total: Decimal;
     begin
+        If Rec."Nº Proyecto" = '' Then exit(0);
         Cab.SetRange("Document Type", Cab."Document Type"::Invoice);
         Cab.SetRange("Nº Proyecto", Rec."Nº Proyecto");
         if Cab.FindFirst() Then
@@ -3824,6 +3815,7 @@ page 50013 "Ficha Contrato Venta"
         rMov: Record "g/l Entry";
         Total: Decimal;
     begin
+        If Rec."Nº Proyecto" = '' Then exit(0);
         Cab.SetRange("Nº Proyecto", Rec."Nº Proyecto");
         if Cab.FindFirst() Then
             repeat

@@ -70,6 +70,11 @@ table 7001101 "Tipo Recurso"
             Caption = 'Tiene Medidas';
             DataClassification = ToBeClassified;
         }
+        field(13; "Ocultar Tipo Recurso"; Boolean)
+        {
+            Caption = 'Ocultar Tipo Recurso';
+            DataClassification = ToBeClassified;
+        }
     }
     keys
     {

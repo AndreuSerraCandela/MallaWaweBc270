@@ -97,6 +97,45 @@ page 50078 "Tabla Tipo Recurso"
                         PAGE.RUNMODAL(50500);
                     END;
                 }
+                action("Copiar desde otra empresa")
+                {
+                    Caption = 'Copiar desde otra empresa';
+                    Image = Copy;
+                    ApplicationArea = All;
+                    trigger OnAction()
+                    VAR
+                        Company: Record Company;
+                        TipoRecursoOrigen: Record "Tipo Recurso";
+                        TipoRecursoDestino: Record "Tipo Recurso";
+                        Ventana: Dialog;
+                        Contador: Integer;
+                        Total: Integer;
+                        Copiados: Integer;
+                    BEGIN
+                        // Seleccionar empresa
+                        Company.SetRange("Evaluation Company", false);
+                        if Page.RunModal(Page::Companies, Company) in [Action::LookupOK, Action::OK] THEN BEGIN
+                            if Company.Name = COMPANYNAME THEN
+                                ERROR('Debe seleccionar una empresa diferente a la actual.');
+
+                            // Cambiar a la empresa origen y leer registros
+                            TipoRecursoOrigen.ChangeCompany(Company.Name);
+                            If Page.RunModal(Page::"Tabla Tipo Recurso", TipoRecursoOrigen) in [Action::LookupOK, Action::OK] THEN BEGIN
+                                if TipoRecursoDestino.GET(TipoRecursoOrigen.Tipo) THEN TipoRecursoDestino.Delete(FALSE);
+
+                                // Copiar el registro
+                                TipoRecursoDestino := TipoRecursoOrigen;
+                                TipoRecursoDestino.INSERT;
+
+
+                                MESSAGE('Se ha copiado el Tipo Recurso %1 desde la empresa %2.', TipoRecursoOrigen.Tipo, Company.Name);
+                                COMMIT;
+
+                            END ELSE
+                                MESSAGE('Proceso de copia cancelado.');
+                        END;
+                    END;
+                }
             }
         }
     }

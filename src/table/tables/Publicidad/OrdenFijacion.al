@@ -172,6 +172,7 @@ table 7001202 "Cab Orden fijación"
             repeat
                 rImagen2 := rImagen;
                 rImagen2."Nº Orden" := num;
+                If rImagen2.Nombre = '' Then rImagen2.Nombre := 'Imagen_' + Format(rImagen2."Nº Orden") + '.png';
                 rImagen2.INSERT;
             until rImagen.NEXT = 0;
         exit(Num);
@@ -316,6 +317,7 @@ table 7001207 "Orden fijación"
             Caption = 'Refijación';
         }
 
+
     }
     KEYS
     {
@@ -435,6 +437,10 @@ table 7001208 "Imagenes Orden fijación"
 
             NotBlank = true;
 
+
+        }
+        field(77; RrcorIdDocAcct; RecordId)
+        {
 
         }
 

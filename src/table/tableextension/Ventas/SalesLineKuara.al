@@ -498,9 +498,12 @@ tableextension 80134 SalesLineKuara extends "Sales Line"
     /// <param name="Var SalesLine">Record "Sales Line".</param>
     /// <param name="VATAmountLine">VAR Record "VAT Amount Line".</param>
     /// <param name="Var Empresa">Text[30].</param>
+#pragma warning disable AL0432
     procedure CalcVATAmountLinesEmpresa(QtyType: Option General,Invoicing,Shipping; Var SalesHeader: Record "Sales Header"; Var SalesLine: Record "Sales Line"; var VATAmountLine: Record "VAT Amount Line"; Var Empresa: Text[30])
+
     var
         PrevVatAmountLine: Record "VAT Amount Line";
+#pragma warning restore AL0432
         Currency: Record Currency;
         SalesTaxCalculate: Codeunit "Sales Tax Calculate";
         QtyFactor: Decimal;
