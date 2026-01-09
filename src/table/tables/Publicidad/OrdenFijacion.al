@@ -430,7 +430,9 @@ table 7001208 "Imagenes Orden fijación"
         field(71; "Es Qr"; Boolean) { }
         field(72; "Es Incidencia"; Boolean) { }
         field(73; Id; Integer)
-        { }
+        {
+
+        }
         field(75; "Url Retirada"; Text[1024])
         {
             Caption = 'Nombre';

@@ -1013,6 +1013,36 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Cambios dimensiones - Field Cod. nuevo - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 881815777 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Campañas a retirar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Campañas a retirar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 881815777 - Field 1084521890 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Campaña</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Campañas a retirar - Field Campaña - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 881815777 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Campañas a retirar - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 881815777 - Field 1991915875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Campañas a retirar - Field Fecha - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 881815777 - Field 3687165909 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Observaciones</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Campañas a retirar - Field Observaciones - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 881815777 - Field 4128707616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tirar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Campañas a retirar - Field Tirar - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2457513091 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Clasificación Intercambio</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -19598,6 +19628,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field Fecha Estado Contrato - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3772534253 - Field 3543875086 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
+          <source>Fecha Fijación</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field Fecha Fijación - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3772534253 - Field 2991317036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
           <source>Fecha Firma</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -19612,6 +19647,11 @@
           <source>Fija/Papel</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field Fija/Papel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3772534253 - Field 1398668058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
+          <source>Fijar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field Fijar - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3772534253 - Field 1346875814 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
           <source>Firmado</source>
@@ -19647,6 +19687,11 @@
           <source>No Pay</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field No Pay - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3772534253 - Field 1053300680 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
+          <source>Nº soportes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field No. soportes - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3772534253 - Field 883629892 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
           <source>Anunciante</source>
@@ -19732,6 +19777,16 @@
           <source>Tipo de Fijación</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field Tipo de Fijación - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3772534253 - Field 1035954726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
+          <source>Tipo Soporte</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field Tipo Soporte - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3772534253 - Field 1035954726 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
+          <source>Opis,Vallas,Vallas Peantones,Indicadores</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field Tipo Soporte - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3772534253 - Field 4123645511 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
           <source>Vendedor Origen</source>

@@ -224,19 +224,17 @@ page 50027 "Intercambio x Empresa"
     var
         Ventana: Dialog;
         a: Integer;
-        // Sql: DotNet Sql;
-        // SqlAdapter: DotNet SqlAdp;
-        // SqlCmd: DotNet SqlCmd;
-        // Datatable: DotNet DataTable;
-        // //SqlCommand: DotNet "System.Data.SqlClient.SqlCommand";
-        //SqlDataReader: DotNet "System.Data.SqlClient.SqlDataReader";
-        //Sql: DotNet "System Data" //	Automation	'Microsoft ActiveX Data Objects 2.7 Library'.Connection;
-        //Trec:	Automation	'Microsoft ActiveX Data Objects 2.7 Library'.Recordset;
-        // cquery: Text[1024];
-        // cquery2: Text[1024];
-        r120t: Record "Purch. Rcpt. Header" temporary;
-        r120: Record "Purch. Rcpt. Header";
-        r38: Record "Purchase Header";
+    // Sql: DotNet Sql;
+    // SqlAdapter: DotNet SqlAdp;
+    // SqlCmd: DotNet SqlCmd;
+    // Datatable: DotNet DataTable;
+    // //SqlCommand: DotNet "System.Data.SqlClient.SqlCommand";
+    //SqlDataReader: DotNet "System.Data.SqlClient.SqlDataReader";
+    //Sql: DotNet "System Data" //	Automation	'Microsoft ActiveX Data Objects 2.7 Library'.Connection;
+    //Trec:	Automation	'Microsoft ActiveX Data Objects 2.7 Library'.Recordset;
+    // cquery: Text[1024];
+    // cquery2: Text[1024];
+
 
     trigger OnOpenPage();
     begin
@@ -794,6 +792,12 @@ page 50027 "Intercambio x Empresa"
     END;
 
     PROCEDURE AlbaranesPendientes(pEmpresa: Text[30]; Fdesde: Date; Fhasta: Date; intercam: Code[10]): Decimal;
+    begin
+        //obsolete
+        exit(0);
+    end;
+
+    PROCEDURE AlbaranesPendientes(pEmpresa: Text[30]; Fdesde: Date; Fhasta: Date; intercam: Code[10]; var r120: Record "Purch. Rcpt. Header"): Decimal;
     VAR
         c: Label '';
         Importe: Decimal;
@@ -858,7 +862,13 @@ page 50027 "Intercambio x Empresa"
         EXIT(Importe);
     END;
 
-    PROCEDURE PedidosPendientes(pEmpresa: Text[30]; Fdesde: Date; Fhasta: Date; intercam: Code[20]);
+    PROCEDURE PedidosPendientes(pEmpresa: Text[30]; Fdesde: Date; Fhasta: Date; intercam: Code[20]): Decimal;
+    begin
+        //obsolete
+        exit(0);
+    end;
+
+    PROCEDURE PedidosPendientes(pEmpresa: Text[30]; Fdesde: Date; Fhasta: Date; intercam: Code[20]; var r38: Record "Purchase Header"): Decimal;
     VAR
         rEmp: Record "Company Information";
         Importe: Decimal;
@@ -1180,19 +1190,17 @@ page 7001101 "Intercambio x Empresa LP"
     var
         Ventana: Dialog;
         a: Integer;
-        // Sql: DotNet Sql;
-        // SqlAdapter: DotNet SqlAdp;
-        // SqlCmd: DotNet SqlCmd;
-        // Datatable: DotNet DataTable;
-        // //SqlCommand: DotNet "System.Data.SqlClient.SqlCommand";
-        //SqlDataReader: DotNet "System.Data.SqlClient.SqlDataReader";
-        //Sql: DotNet "System Data" //	Automation	'Microsoft ActiveX Data Objects 2.7 Library'.Connection;
-        //Trec:	Automation	'Microsoft ActiveX Data Objects 2.7 Library'.Recordset;
-        // cquery: Text[1024];
-        // cquery2: Text[1024];
-        r120t: Record "Purch. Rcpt. Header" temporary;
-        r120: Record "Purch. Rcpt. Header";
-        r38: Record "Purchase Header";
+    // Sql: DotNet Sql;
+    // SqlAdapter: DotNet SqlAdp;
+    // SqlCmd: DotNet SqlCmd;
+    // Datatable: DotNet DataTable;
+    // //SqlCommand: DotNet "System.Data.SqlClient.SqlCommand";
+    //SqlDataReader: DotNet "System.Data.SqlClient.SqlDataReader";
+    //Sql: DotNet "System Data" //	Automation	'Microsoft ActiveX Data Objects 2.7 Library'.Connection;
+    //Trec:	Automation	'Microsoft ActiveX Data Objects 2.7 Library'.Recordset;
+    // cquery: Text[1024];
+    // cquery2: Text[1024];
+
 
 
     PROCEDURE TotalesDocumentos(No: Code[20]; pEmpresa: Text[30]): Decimal;
@@ -1744,7 +1752,7 @@ page 7001101 "Intercambio x Empresa LP"
         EXIT(Importe);
     END;
 
-    PROCEDURE AlbaranesPendientes(pEmpresa: Text[30]; Fdesde: Date; Fhasta: Date; intercam: Code[10]): Decimal;
+    PROCEDURE AlbaranesPendientes(pEmpresa: Text[30]; Fdesde: Date; Fhasta: Date; intercam: Code[10]; var r120: Record "Purch. Rcpt. Header"): Decimal;
     VAR
         c: Label '';
         Importe: Decimal;
@@ -1809,7 +1817,7 @@ page 7001101 "Intercambio x Empresa LP"
         EXIT(Importe);
     END;
 
-    PROCEDURE PedidosPendientes(pEmpresa: Text[30]; Fdesde: Date; Fhasta: Date; intercam: Code[20]);
+    PROCEDURE PedidosPendientes(pEmpresa: Text[30]; Fdesde: Date; Fhasta: Date; intercam: Code[20]; var r38: Record "Purchase Header"): Decimal;
     VAR
         rEmp: Record "Company Information";
         Importe: Decimal;

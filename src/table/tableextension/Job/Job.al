@@ -315,6 +315,22 @@ tableextension 80101 JobKuara extends "Job"
         {
             DataClassification = ToBeClassified;
         }
+        field(60023; "Fijar"; Boolean)
+        {
+
+        }
+        field(60024; "Fecha Fijación"; Date)
+        {
+
+        }
+        field(60025; "Tipo Soporte"; Option)
+        {
+            OptionMembers = "Opis","Vallas","Vallas Peantones","Indicadores";
+        }
+        field(60026; "No. soportes"; Integer)
+        {
+            Caption = 'Nº soportes';
+        }
 
 
     }
