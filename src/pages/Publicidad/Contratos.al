@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Lista Contratos Venta (ID 50011).
 /// </summary>
-page 50011 "Lista Contratos Venta"
+page 50208 "Lista Contratos Venta"
 {
 
     Caption = 'Contratos';

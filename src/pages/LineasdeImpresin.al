@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Lineas de Impresión (ID 50014).
 /// </summary>
-page 50014 "Lineas de Impresión"
+page 50210 "Lineas de Impresión"
 {
 
     Caption = 'Lineas de Impresión';

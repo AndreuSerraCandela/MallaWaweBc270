@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Lista Espera Recursos (ID 7001165).
 /// </summary>
-page 50108 "Lista Espera Recursos"
+page 50252 "Lista Espera Recursos"
 {
     ApplicationArea = All;
     Caption = 'Lista de Espera de Recursos';

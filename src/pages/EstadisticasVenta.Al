@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Estadisticas Venta (ID 50048).
 /// </summary>
-page 50048 "Estadisticas Venta"
+page 50230 "Estadisticas Venta"
 {
     PageType = List;
     UsageCategory = Lists;

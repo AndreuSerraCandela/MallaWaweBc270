@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Gestion tarifas de publicidad (ID 50092).
 /// </summary>
-page 50092 "Gestion tarifas de publicidad"
+page 50246 "Gestion tarifas de publicidad"
 {
     Caption = 'Gestión Tarifas';
     SaveValues = true;

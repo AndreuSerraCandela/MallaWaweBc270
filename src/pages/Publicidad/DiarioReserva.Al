@@ -1,4 +1,4 @@
-page 50090 "Diario Reserva"
+page 50244 "Diario Reserva"
 {
     PageType = List;
 

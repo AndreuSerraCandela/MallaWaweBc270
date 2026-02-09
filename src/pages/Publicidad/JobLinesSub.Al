@@ -1,7 +1,7 @@
 /// <summary>
 /// Page JobLinesSub (ID 50019).
 /// </summary>
-page 50019 "JobLinesSub"
+page 50214 "JobLinesSub"
 {
     Caption = 'Job Lines SubPage';
     DataCaptionFields = "Job No.";

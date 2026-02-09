@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Dialogo (ID 50015).
 /// </summary>
-page 50015 Dialogo
+page 50211 Dialogo
 {
     PageType = StandardDialog;
     layout

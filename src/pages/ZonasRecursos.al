@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Zonas Recursos (ID 50001).
 /// </summary>
-page 50001 "Zonas Recursos"
+page 50200 "Zonas Recursos"
 {
 
     ApplicationArea = All;

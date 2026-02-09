@@ -1,5 +1,4 @@
-
-page 50095 "Texto Presupuesto"
+page 50249 "Texto Presupuesto"
 {
     PageType = List;
     AutoSplitKey = true;

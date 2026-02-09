@@ -47,7 +47,7 @@ page 7001167 "Lista Prestamos"
                 Image = Card;
                 ShortCutKey = 'Mayús+F5';
                 Caption = 'Ficha';
-                RunObject = page 50046;
+                RunObject = page "Cabecera Prestamo";
                 RunPageLink = "Código Del Prestamo" = FIELD("Código Del Prestamo");
             }
         }

@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Ficha Reserva (ID 50087).
 /// </summary>
-page 50087 "Ficha Reserva"
+page 50242 "Ficha Reserva"
 {
     PageType = Card;
     SourceTable = Reserva;

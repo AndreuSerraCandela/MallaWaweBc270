@@ -1,4 +1,4 @@
-page 50025 "SubPage tarifas orden pub."
+page 50216 "SubPage tarifas orden pub."
 {
     PageType = ListPart;
     SourceTable = "Tarifas orden publicidad";

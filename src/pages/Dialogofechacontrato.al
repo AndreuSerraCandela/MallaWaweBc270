@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Dialogo fecha contrato (ID 50008).
 /// </summary>
-page 50008 "Dialogo fecha contrato"
+page 50205 "Dialogo fecha contrato"
 {
 
     PageType = StandardDialog;

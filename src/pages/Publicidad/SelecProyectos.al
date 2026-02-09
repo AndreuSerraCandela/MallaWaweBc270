@@ -2,7 +2,7 @@
 /// <summary>
 /// Page Sel. proyectos a traspasar (ID 50081).
 /// </summary>
-page 50081 "Sel. proyectos a traspasar"
+page 50237 "Sel. proyectos a traspasar"
 {
     //Version List=MLL;
     Editable = false;

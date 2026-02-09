@@ -15393,11 +15393,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Medidas - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1596787594 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Modelo 180 Resumen</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Modelo 180 Resumen - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 1659652828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Mov. Clien Pendientes a fecha</source>
           <note from="Developer" annotates="general" priority="2"></note>

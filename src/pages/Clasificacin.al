@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Clasificación (ID 50066).
 /// </summary>
-page 50066 "Clasificación"
+page 50231 "Clasificación"
 {
 
     ApplicationArea = All;

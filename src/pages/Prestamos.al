@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Prestamos (ID 50018).
 /// </summary>
-page 50018 Prestamos
+page 50213 Prestamos
 {
     PageType = List;
     UsageCategory = Lists;
@@ -807,7 +807,7 @@ page 50018 Prestamos
     procedure DrilDown(i: Integer)
     var
         Cab: Record "Cabecera Prestamo";
-        Pres: Page 50046;
+        Pres: Page "Cabecera Prestamo";
     begin
         Cab.ChangeCompany(Rec.Empresa);
         Cab.SetRange("Código Del Prestamo", Rec."Cabecera Prestamo2");

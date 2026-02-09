@@ -2,7 +2,7 @@
 /// <summary>
 /// Page Tabla Tipo Recurso (ID 50078).
 /// </summary>
-page 50078 "Tabla Tipo Recurso"
+page 50235 "Tabla Tipo Recurso"
 {
     PageType = List;
     UsageCategory = Lists;

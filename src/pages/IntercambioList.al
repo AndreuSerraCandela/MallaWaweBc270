@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Intercambio List (ID 50026).
 /// </summary>
-page 50026 "Intercambio List"
+page 50217 "Intercambio List"
 {
     Caption = 'Lista Intercambio';
     PageType = List;

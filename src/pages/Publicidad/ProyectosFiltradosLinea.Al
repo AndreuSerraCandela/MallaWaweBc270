@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Proyectos filtrados por linea (ID 50094).
 /// </summary>
-page 50094 "Proyectos filtrados por linea"
+page 50248 "Proyectos filtrados por linea"
 {
     Caption = 'Proyectos filtrados por linea';
     SourceTable = "Temp Job";

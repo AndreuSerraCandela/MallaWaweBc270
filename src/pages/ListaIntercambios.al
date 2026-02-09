@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Intercambio x Empresa (ID 50027).
 /// </summary>
-page 50027 "Intercambio x Empresa"
+page 50218 "Intercambio x Empresa"/// 
 {
 
     ApplicationArea = All;

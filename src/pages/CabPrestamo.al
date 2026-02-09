@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Cabecera Prestamo (ID 50046).
 /// </summary>
-page 50046 "Cabecera Prestamo"
+page 50228 "Cabecera Prestamo"
 {
     SourceTable = "Cabecera Prestamo";
     SourceTableView = WHERE(Empresa = FILTER(''), Renting = const(false));

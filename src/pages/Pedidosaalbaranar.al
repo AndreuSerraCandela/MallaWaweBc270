@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Pedidos a albaranar (ID 50006).
 /// </summary>
-page 50006 "Pedidos a albaranar"
+page 50203 "Pedidos a albaranar"
 {
 
     SourceTable = "Pedidos Pendientes";

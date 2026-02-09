@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Tabla Recursos (ID 50005).
 /// </summary>
-page 50005 "Tabla Recursos"
+page 50202 "Tabla Recursos"
 {
     PageType = List;
     Caption = 'Tabla Recursos';

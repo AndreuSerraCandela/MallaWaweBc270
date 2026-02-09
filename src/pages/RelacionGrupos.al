@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Relación Grupos (ID 50039).
 /// </summary>
-page 50039 "Relación Grupos"
+page 50225 "Relación Grupos"
 {
     ApplicationArea = All;
     Caption = 'Relación Grupos';

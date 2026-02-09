@@ -4,7 +4,7 @@
 /// <summary>
 /// Page Ultimas reservas recurso (ID 50082).
 /// </summary>
-page 50082 "Ultimas reservas recurso"
+page 50238 "Ultimas reservas recurso"
 {
     //Version List=MLL;
     Editable = false;
@@ -45,7 +45,7 @@ page 50082 "Ultimas reservas recurso"
     END;
 
 }
-page 50083 "Tabla presupuesto mismo recurs"
+page 50239 "Tabla presupuesto mismo recurs"
 {
     //Version List=MLL1.00;
     Editable = false;
@@ -86,7 +86,7 @@ page 50083 "Tabla presupuesto mismo recurs"
     END;
 
 }
-page 50084 "Términos de facturación"
+page 50240 "Términos de facturación"
 {
     //Version List=MLL1.00;
     //area(Content){ Repeater(Detalle){ID=1;
@@ -125,7 +125,7 @@ page 50084 "Términos de facturación"
         }
     }
 }
-page 50085 "Plazos de facturación"
+page 50241 "Plazos de facturación"
 {
     //Version List=MLL1.00;
     //area(Content){ Repeater(Detalle){ID=1;

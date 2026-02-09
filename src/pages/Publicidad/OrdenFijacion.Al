@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Ficha Orden Fijacion (ID 50091).
 /// </summary>
-page 50091 "Ficha Orden Fijacion"
+page 50245 "Ficha Orden Fijacion"
 {
     PageType = Card;
     SourceTable = "Cab Orden fijación";

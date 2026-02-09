@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Lista ordenes fijación (ID 50098).
 /// </summary>
-page 50098 "Lista ordenes fijación"
+page 50250 "Lista ordenes fijación"
 {
     PageType = List;
     UsageCategory = Lists;

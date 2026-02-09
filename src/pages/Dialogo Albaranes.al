@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Dialogo Albaranes (ID 50007).
 /// </summary>
-page 50007 "Dialogo Albaranes"
+page 50204 "Dialogo Albaranes"
 {
 
     PageType = StandardDialog;

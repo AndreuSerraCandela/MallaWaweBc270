@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Petición datos Pagaré (ID 50034).
 /// </summary>
-page 50034 "Petición datos Pagaré"
+page 50224 "Petición datos Pagaré"
 {
     PageType = StandardDialog;
     layout

@@ -1,7 +1,7 @@
 /// <summary>
 /// Page SubPage orden de publicidad (ID 50088).
 /// </summary>
-page 50088 "SubPage orden de publicidad"
+page 50243 "SubPage orden de publicidad"
 {
     PageType = ListPart;
     SourceTable = "Lin. orden publicidad";

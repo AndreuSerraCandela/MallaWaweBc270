@@ -1,4 +1,4 @@
-page 50028 "Secciones Publicidad"
+page 50219 "Secciones Publicidad"
 {
     PageType = List;
     UsageCategory = Lists;

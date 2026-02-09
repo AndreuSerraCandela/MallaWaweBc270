@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Iva Por fechas (ID 50076).
 /// </summary>
-page 50076 "Iva Por fechas"
+page 50234 "Iva Por fechas"
 {
 
     PageType = List;

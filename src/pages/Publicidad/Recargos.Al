@@ -1,4 +1,4 @@
-page 50029 "Recargos Publicidad"
+page 50220 "Recargos Publicidad"
 {
     PageType = List;
     UsageCategory = Lists;

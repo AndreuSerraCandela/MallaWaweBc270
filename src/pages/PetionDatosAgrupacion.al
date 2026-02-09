@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Petición Datos Agrupación (ID 50033).
 /// </summary>
-page 50033 "Petición Datos Agrupación"
+page 50223 "Petición Datos Agrupación"
 {
     PageType = StandardDialog;
     layout

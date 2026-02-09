@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Sincroniza. Setup (ID 50042).
 /// </summary>
-page 50042 "Sincroniza. Setup"
+page 50226 "Sincroniza. Setup"
 {
     ApplicationArea = Basic, Suite;
     Caption = 'Configuración sincronización';
@@ -168,7 +168,7 @@ page 50042 "Sincroniza. Setup"
     end;
 
 }
-page 50045 "Sincr. Log Setup (Table) List"
+page 50227 "Sincr. Log Setup (Table) List"
 {
     Caption = 'Lista tablas sincronización';
     DeleteAllowed = false;
@@ -433,7 +433,7 @@ page 50045 "Sincr. Log Setup (Table) List"
 
 
 }
-page 50047 "Sincr Log Setup (Field) List"
+page 50229 "Sincr Log Setup (Field) List"
 {
     Caption = 'Lista Campos Sincronización';
     DataCaptionExpression = LogPageCaption;

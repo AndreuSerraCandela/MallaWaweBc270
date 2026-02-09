@@ -1,5 +1,4 @@
-
-page 50030 "Dias Tarifa Publicidad"
+page 50221 "Dias Tarifa Publicidad"
 {
     PageType = List;
     UsageCategory = Lists;

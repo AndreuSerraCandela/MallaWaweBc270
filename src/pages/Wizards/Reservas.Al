@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Laerit File Management Setup Wizard (ID 50080).
 /// </summary>
-page 50080 "Wizard Reservas"
+page 50236 "Wizard Reservas"
 {
     Caption = 'Wizard Reservas';
     PageType = NavigatePage;

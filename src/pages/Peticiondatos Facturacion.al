@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Petición datos Facturación (ID 50010).
 /// </summary>
-page 50010 "Petición datos Facturación"
+page 50207 "Petición datos Facturación"
 {
     PageType = StandardDialog;
     layout

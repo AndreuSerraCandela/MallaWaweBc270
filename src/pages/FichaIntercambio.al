@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Ficha Intercambio (ID 50099).
 /// </summary>
-page 50099 "Ficha Intercambio"
+page 50251 "Ficha Intercambio"
 {
 
     Caption = 'Ficha Intercambio';

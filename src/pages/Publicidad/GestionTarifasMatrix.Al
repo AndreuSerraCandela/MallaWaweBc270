@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Gestion tarifas de matrix (ID 50093).
 /// </summary>
-page 50093 "Gestion tarifas de matrix"
+page 50247 "Gestion tarifas de matrix"
 {
     PageType = ListPart;
     SourceTable = Resource;

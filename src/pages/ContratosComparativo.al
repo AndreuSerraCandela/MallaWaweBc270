@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Comparativo Compra/Venta Contr (ID 50070).
 /// </summary>
-page 50070 "Comparativo Compra/Venta Contr"
+page 50232 "Comparativo Compra/Venta Contr"
 {
 
     InsertAllowed = false;

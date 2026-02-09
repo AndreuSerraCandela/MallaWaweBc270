@@ -1,7 +1,7 @@
 /// <summary>
 /// Page Comparativa Contratos (ID 50017).
 /// </summary>
-page 50017 "Comparativa Contratos"
+page 50212 "Comparativa Contratos"
 {
     InsertAllowed = false;
     DeleteAllowed = false;
