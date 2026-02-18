@@ -65,7 +65,7 @@ tableextension 80102 SalesHeaderKuara extends "Sales Header"
         field(50057; "Borradores de Compra"; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = Count("pURCHASE Header" WHERE("Document Type" = CONST(Invoice),
+            CalcFormula = Count("pURCHASE Header" WHERE("Document Type" = filter(Invoice | "Credit Memo"),
 
                                                                                            "Nº Proyecto" = FIELD("Nº Proyecto")));
             Editable = false;

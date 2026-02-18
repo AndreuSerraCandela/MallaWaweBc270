@@ -310,7 +310,33 @@ page 50209 "Ficha Contrato Venta"
                         ApplicationArea = All;
                         //DrillDownPageId = "Lista documentos venta MLL";
                     }
-                    field("Borradores de compra"; Rec."Borradores de cOMPRA") { ApplicationArea = All; DrillDownPageId = "Purchase Invoices"; }
+                    field("Borradores de compra"; Rec."Borradores de cOMPRA")
+                    {
+                        trigger OnDrillDown()
+                        var
+                            Cab: Record "Purchase Header";
+                            DocumentType: Enum "Purchase Document Type";
+                        begin
+                            Cab.SetFilter("Document Type", '%1|%2', Cab."Document Type"::Invoice, Cab."Document Type"::"Credit Memo");
+                            Cab.SetRange("Nº Proyecto", Rec."Nº Proyecto");
+                            If Cab.FindFirst() Then Begin
+                                DocumentType := Cab."Document Type";
+                                repeat
+                                    if DocumentType <> Cab."Document Type" then begin
+                                        Page.RunModal(Page::"Purchase List", Cab);
+                                        exit;
+                                    end;
+
+                                until Cab.Next() = 0;
+                                Case DocumentType OF
+                                    DocumentType::Invoice:
+                                        Page.RunModal(Page::"Purchase Invoices", Cab);
+                                    DocumentType::"Credit Memo":
+                                        Page.RunModal(Page::"Purchase Credit Memos", Cab);
+                                end;
+                            end;
+                        end;
+                    }
                     field("Importe Borradores Compra"; ImporteBorradorCompra())
                     {
                         ApplicationArea = All;
@@ -3792,11 +3818,11 @@ page 50209 "Ficha Contrato Venta"
         Total: Decimal;
     begin
         If Rec."Nº Proyecto" = '' Then exit(0);
-        Cab.SetRange("Document Type", Cab."Document Type"::Invoice);
+        Cab.SetFilter("Document Type", '%1|%2', Cab."Document Type"::Invoice, Cab."Document Type"::"Credit Memo");
         Cab.SetRange("Nº Proyecto", Rec."Nº Proyecto");
         if Cab.FindFirst() Then
             repeat
-                Lin.SetRange("Document Type", Lin."Document Type"::Invoice);
+                Lin.SetRange("Document Type", Cab."Document Type");
                 Lin.SetRange("Document No.", Cab."No.");
                 if lin.FindFirst() Then
                     repeat
