@@ -71,32 +71,62 @@ page 7001159 "SeleccionRecursos"
     procedure filtraEmresa(var Usr: Record "User Setup")
     var
         Emp: Text;
+        ListEmpresas: List of [Text];
+        Empresas: array[20] of Record Company;
+
     begin
         if Usr."Mostrar Malla Publicidad" Then begin
-            if Emp = '' then
-                Emp := 'Malla Publicidad'
-            else
-                Emp := Emp + '|Malla Publicidad';
+            ListEmpresas.Add('Malla Publicidad');
         end;
         if Usr."Mostrar Grepsa" then begin
-            if Emp = '' then
-                Emp := 'Grepsa'
-            else
-                Emp := Emp + '|Grepsa';
+            ListEmpresas.Add('Grepsa');
         end;
         if Usr."Mostrar Ibiza Publicidad" then begin
-            if Emp = '' then
-                Emp := 'Ibiza Publicidad, S.A.'
-            else
-                Emp := Emp + '|Ibiza Publicidad, S.A.';
+            ListEmpresas.Add('Ibiza Publicidad, S.A.');
         end;
         if Usr."Mostrar Menorca Publicidad" then begin
-            if Emp = '' then
-                Emp := 'Menorca de Publicidad, S.A.'
-            else
-                Emp := Emp + '|Menorca de Publicidad, S.A.';
+            ListEmpresas.Add('Menorca de Publicidad, S.A.');
         end;
-        Rec.SetFilter(Empresa, '%1', Emp);
+        Case ListEmpresas.Count() of
+            0:
+                Rec.SetRange(Empresa, '');
+            1:
+                begin
+                    Empresas[1].Get(ListEmpresas.Get(1));
+                    Rec.SetFilter(Empresa, '%1', Empresas[1].Name);
+                end;
+            2:
+                begin
+                    Empresas[1].Get(ListEmpresas.Get(1));
+                    Empresas[2].Get(ListEmpresas.Get(2));
+                    Rec.SetFilter(Empresa, '%1|%2', Empresas[1].Name, Empresas[2].Name);
+                end;
+            3:
+                begin
+                    Empresas[1].Get(ListEmpresas.Get(1));
+                    Empresas[2].Get(ListEmpresas.Get(2));
+                    Empresas[3].Get(ListEmpresas.Get(3));
+                    Rec.SetFilter(Empresa, '%1|%2|%3', Empresas[1].Name, Empresas[2].Name, Empresas[3].Name);
+                end;
+            4:
+                begin
+                    Empresas[1].Get(ListEmpresas.Get(1));
+                    Empresas[2].Get(ListEmpresas.Get(2));
+                    Empresas[3].Get(ListEmpresas.Get(3));
+                    Empresas[4].Get(ListEmpresas.Get(4));
+                    Rec.SetFilter(Empresa, '%1|%2|%3|%4', Empresas[1].Name, Empresas[2].Name, Empresas[3].Name, Empresas[4].Name);
+                end;
+            5:
+                begin
+                    Empresas[1].Get(ListEmpresas.Get(1));
+                    Empresas[2].Get(ListEmpresas.Get(2));
+                    Empresas[3].Get(ListEmpresas.Get(3));
+                    Empresas[4].Get(ListEmpresas.Get(4));
+                    Empresas[5].Get(ListEmpresas.Get(5));
+                    Rec.SetFilter(Empresa, '%1|%2|%3|%4|%5', Empresas[1].Name, Empresas[2].Name, Empresas[3].Name, Empresas[4].Name, Empresas[5].Name);
+                end;
+
+        end;
         CurrPage.Update(false);
     end;
 
