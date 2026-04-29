@@ -51,6 +51,13 @@ page 50237 "Sel. proyectos a traspasar"
                                 rCabVenta.VALIDATE(rCabVenta."Bill-to Customer No.");
                                 rCabVenta.Status := rCabVenta.Status::Planning;
                                 rCabVenta.MODIFY;
+                                rLinProy.SETRANGE("Job No.", rCabVenta."No.");
+                                if rLinProy.FINDFIRST THEN BEGIN
+                                    REPEAT
+                                        rLinProy.VALIDATE(rLinProy."% Dto. Venta");
+                                        rLinProy.MODIFY;
+                                    UNTIL rLinProy.NEXT = 0;
+                                END;
                             UNTIL rCabVenta.NEXT = 0;
                         END;
                     END;
@@ -62,6 +69,7 @@ page 50237 "Sel. proyectos a traspasar"
         Text001: Label '¿Confirma que desea generar presupuesto para cada una de los presupuestos seleccionadas?';
         Text002: Label 'Proceso cancelado a petición del usuario';
         rCabVenta: Record 167;
+        rLinProy: Record 1003;
         wLinea: Integer;
 
 }

@@ -328,7 +328,7 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
                 Currency: Record Currency;
             begin
                 if xRec."% Dto. Compra" <> "% Dto. Compra" then
-                    Validate("Unit Cost", "Precio Tarifa");
+                    Validate("Unit Cost", "Unit Price");
             end;
         }
         field(50040; "% Dto. Venta"; Decimal)
@@ -349,6 +349,7 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
                 "Total Price" := ROUND(Quantity * "Unit Price" * (1 - "% Dto. Venta" / 100), Currency."Amount Rounding Precision");
                 "Total Venta" := "Total Price";
                 "Line Amount" := "Line Amount" * (1 - "% Dto. Venta" / 100);
+                "Line Amount (LCY)" := "Total Cost (LCY)";
             END;
         }
         field(50054; "% Dto. Venta 1"; Decimal)

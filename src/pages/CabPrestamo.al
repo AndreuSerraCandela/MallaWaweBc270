@@ -4,7 +4,7 @@
 page 50228 "Cabecera Prestamo"
 {
     SourceTable = "Cabecera Prestamo";
-    SourceTableView = WHERE(Empresa = FILTER(''), Renting = const(false));
+    SourceTableView = WHERE(Empresa = FILTER(''), Renting = const(false), Aval = const(false));
     PageType = Card;
     layout
     {
@@ -32,6 +32,20 @@ page 50228 "Cabecera Prestamo"
                 field("Valor Residual"; Rec."Valor Residual") { ApplicationArea = All; }
                 field("En vigor"; Rec."En vigor") { }
             }
+            // group(GrupoDimensionesPrestamo)
+            // {
+            //     Caption = 'Dimensiones';
+            //     field(Departamento; Rec."Global Dimension 1 Code") { ApplicationArea = All; }
+            //     field("Descripción Departamento"; DescripCionDim(1, Rec."Global Dimension 1 Code")) { ApplicationArea = All; Editable = false; }
+            //     field(Programa; Rec."Global Dimension 2 Code") { ApplicationArea = All; }
+            //     field("Descripción Programa"; DescripCionDim(2, Rec."Global Dimension 2 Code")) { ApplicationArea = All; Editable = false; }
+            //     field(Principal; Rec."Global Dimension 3 Code") { ApplicationArea = All; }
+            //     field("Descripción Principal"; DescripCionDim(3, Rec."Global Dimension 3 Code")) { ApplicationArea = All; Editable = false; }
+            //     field(Zona; Rec."Global Dimension 4 Code") { ApplicationArea = All; }
+            //     field("Descripción Zona"; DescripCionDim(4, Rec."Global Dimension 4 Code")) { ApplicationArea = All; Editable = false; }
+            //     field(Soporte; Rec."Global Dimension 5 Code") { ApplicationArea = All; }
+            //     field("Descripción Soporte"; DescripCionDim(5, Rec."Global Dimension 5 Code")) { ApplicationArea = All; Editable = false; }
+            // }
             part(Fdet; "Detalle Prestamo")
             {
                 ApplicationArea = All;
@@ -415,6 +429,7 @@ page 50228 "Cabecera Prestamo"
     trigger OnNewRecord(BelowxRex: Boolean)
     begin
         Rec.Renting := false;
+        Rec.Aval := false;
     end;
 
     PROCEDURE Empresa(Cia: Text[30]);
@@ -430,6 +445,18 @@ page 50228 "Cabecera Prestamo"
         if Cab.GETFILTER("Filtro Fecha Liquidación") <> '' THEN
             if CAb."Fecha Préstamo" > Cab.GETRANGEMAX("Filtro Fecha Liquidación") THEN EXIT(0);
         EXIT(Cab."Importe Prestamo" - Cab.Liquidado);
+    END;
+
+    PROCEDURE DescripCionDim(Dim: Integer; DimValCode: Code[20]): Text[100];
+    VAR
+        r349: Record "Dimension Value";
+    BEGIN
+        r349.SETRANGE(r349."Global Dimension No.", Dim);
+        r349.SETRANGE(r349.Code, DimValCode);
+        if r349.FINDFIRST THEN BEGIN
+            if r349.Name = '' THEN EXIT(r349.Code);
+            EXIT(r349.Name);
+        END;
     END;
 
 

@@ -117,7 +117,7 @@ table 7001164 "Cabecera Prestamo"
             CaptionClass = '1,2,5';
             trigger OnValidate()
             BEGIN
-                ValidateShortcutDimCode(2, "Global Dimension 2 Code");
+                ValidateShortcutDimCode(5, "Global Dimension 5 Code");
             END;
         }
         field(51027; "Importe Pendiente"; Decimal)
@@ -129,6 +129,7 @@ table 7001164 "Cabecera Prestamo"
         field(50031; Mantenimiento; Decimal) { }
         field(50032; "En vigor"; Boolean) { }
         field(50033; "Cabecera Prestamo3"; Text[100]) { }
+        field(50034; Aval; Boolean) { Caption = 'Aval'; }
     }
 
     KEYS

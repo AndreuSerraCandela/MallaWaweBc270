@@ -763,6 +763,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Cabecera Prestamo - Field Amortización - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 717472261 - Field 978790638 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Aval</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Cabecera Prestamo - Field Aval - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 717472261 - Field 3778885848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Años</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1568,6 +1573,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Detalle Prestamo - Field Amortización - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3807311310 - Field 978790638 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Aval</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Detalle Prestamo - Field Aval - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3807311310 - Field 396436890 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Capital Pendiente</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1577,6 +1587,11 @@
           <source>Código Del Prestamo</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Detalle Prestamo - Field Código Del Prestamo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3807311310 - Field 2615446671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Detalle Prestamo - Field Descripción - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3807311310 - Field 1116050679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Empresa</source>
@@ -1597,6 +1612,11 @@
           <source>Gastos</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Detalle Prestamo - Field Gastos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3807311310 - Field 3301897649 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hasta</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Detalle Prestamo - Field Hasta - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3807311310 - Field 4147964400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Intereses</source>
@@ -25642,6 +25662,11 @@
           <source>VAT Cash Regime ant</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension VAT EntryKuara - Field VAT Cash Regime ant - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3766906940 - Field 1353312013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4132487568">
+          <source>Clausula Exenta</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension VAT Posting SetupKuara - Field Clausula Exenta - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3766906940 - Field 3544532585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4132487568">
           <source>Emplazaminentos</source>

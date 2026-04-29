@@ -34,12 +34,23 @@ table 7001188 "Detalle Prestamo"
             FieldClass = FlowField;
             CalcFormula = lookup("Cabecera Prestamo".Renting where("Código Del Prestamo" = field("Código Del Prestamo")));
         }
+        field(50032; Aval; Boolean)
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup("Cabecera Prestamo".Aval where("Código Del Prestamo" = field("Código Del Prestamo")));
+        }
         field(14; Facturado; Boolean)
         {
 
         }
         field(50030; Seguro; Decimal) { }
         field(50031; Mantenimiento; Decimal) { }
+        //Descripcion del prestamo
+        field(50033; "Descripción"; Text[100]) { }
+        field(50034; "Hasta"; Date)
+        {
+            Caption = 'Hasta';
+        }
     }
     KEYS
     {

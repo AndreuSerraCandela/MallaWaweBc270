@@ -8,7 +8,7 @@ page 7001167 "Lista Prestamos"
     UsageCategory = Lists;
     Editable = false;
     SourceTable = "Cabecera Prestamo";
-    SourceTableView = WHERE(Empresa = FILTER(''), Renting = const(false));
+    SourceTableView = WHERE(Empresa = FILTER(''), Renting = const(false), Aval = const(false));
     CardPageId = "Cabecera Prestamo";
     layout
     {
@@ -34,6 +34,16 @@ page 7001167 "Lista Prestamos"
                 field(Banco; Rec.Banco) { ApplicationArea = All; }
                 field(Meses; Rec.Meses) { ApplicationArea = All; }
                 field("En vigor"; Rec."En vigor") { }
+                // field(Departamento; Rec."Global Dimension 1 Code") { ApplicationArea = All; }
+                // field("Descripción Departamento"; DescripCionDim(1, Rec."Global Dimension 1 Code")) { ApplicationArea = All; }
+                // field(Programa; Rec."Global Dimension 2 Code") { ApplicationArea = All; }
+                // field("Descripción Programa"; DescripCionDim(2, Rec."Global Dimension 2 Code")) { ApplicationArea = All; }
+                // field(Principal; Rec."Global Dimension 3 Code") { ApplicationArea = All; }
+                // field("Descripción Principal"; DescripCionDim(3, Rec."Global Dimension 3 Code")) { ApplicationArea = All; }
+                // field(Zona; Rec."Global Dimension 4 Code") { ApplicationArea = All; }
+                // field("Descripción Zona"; DescripCionDim(4, Rec."Global Dimension 4 Code")) { ApplicationArea = All; }
+                // field(Soporte; Rec."Global Dimension 5 Code") { ApplicationArea = All; }
+                // field("Descripción Soporte"; DescripCionDim(5, Rec."Global Dimension 5 Code")) { ApplicationArea = All; }
             }
         }
     }
@@ -55,6 +65,7 @@ page 7001167 "Lista Prestamos"
     trigger OnNewRecord(BelowRec: Boolean)
     begin
         Rec.Renting := false;
+        Rec.Aval := false;
     end;
 
 
@@ -65,5 +76,18 @@ page 7001167 "Lista Prestamos"
             if CAb."Fecha Préstamo" > Cab.GETRANGEMAX("Filtro Fecha Liquidación") THEN EXIT(0);
         EXIT(Cab."Importe Prestamo" - Cab.Liquidado);
     END;
+
+    local procedure DescripCionDim(Dim: Integer; DimValCode: Code[20]): Text[100]
+    var
+        r349: Record "Dimension Value";
+    begin
+        r349.SetRange("Global Dimension No.", Dim);
+        r349.SetRange(Code, DimValCode);
+        if r349.FindFirst() then begin
+            if r349.Name = '' then
+                exit(r349.Code);
+            exit(r349.Name);
+        end;
+    end;
 }
 

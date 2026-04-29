@@ -9,7 +9,7 @@ page 50213 Prestamos
     SourceTable = "Cabecera Prestamo";
     SourceTableView = SORTING(Empresa)
                     WHERE(Empresa = FILTER(<> ''),
-                          "Importe Prestamo" = FILTER(<> 0), Renting = const(false));
+                          "Importe Prestamo" = FILTER(<> 0), Renting = const(false), Aval = const(false));
     CardPageId = "Cabecera Prestamo";
 
 
@@ -61,6 +61,16 @@ page 50213 Prestamos
                 field("Fecha Vto"; Vto(Rec)) { ApplicationArea = All; }
                 field(Leasing; Rec.Leasing) { ApplicationArea = All; }
                 field(Meses; Rec.Meses) { ApplicationArea = All; }
+                // field(Departamento; Rec."Global Dimension 1 Code") { ApplicationArea = All; }
+                // field("Descripción Departamento"; DescripCionDim(1, Rec."Global Dimension 1 Code")) { ApplicationArea = All; Editable = false; }
+                // field(Programa; Rec."Global Dimension 2 Code") { ApplicationArea = All; }
+                // field("Descripción Programa"; DescripCionDim(2, Rec."Global Dimension 2 Code")) { ApplicationArea = All; Editable = false; }
+                // field(Principal; Rec."Global Dimension 3 Code") { ApplicationArea = All; }
+                // field("Descripción Principal"; DescripCionDim(3, Rec."Global Dimension 3 Code")) { ApplicationArea = All; Editable = false; }
+                // field(Zona; Rec."Global Dimension 4 Code") { ApplicationArea = All; }
+                // field("Descripción Zona"; DescripCionDim(4, Rec."Global Dimension 4 Code")) { ApplicationArea = All; Editable = false; }
+                // field(Soporte; Rec."Global Dimension 5 Code") { ApplicationArea = All; }
+                // field("Descripción Soporte"; DescripCionDim(5, Rec."Global Dimension 5 Code")) { ApplicationArea = All; Editable = false; }
                 field(Field1; MATRIX_CellData[1])
                 {
                     ApplicationArea = All;
@@ -648,6 +658,19 @@ page 50213 Prestamos
     local procedure FormatStr(): Text
     begin
         exit(RoundingFactorFormatString);
+    end;
+
+    local procedure DescripCionDim(Dim: Integer; DimValCode: Code[20]): Text[100]
+    var
+        r349: Record "Dimension Value";
+    begin
+        r349.SetRange("Global Dimension No.", Dim);
+        r349.SetRange(Code, DimValCode);
+        if r349.FindFirst() then begin
+            if r349.Name = '' then
+                exit(r349.Code);
+            exit(r349.Name);
+        end;
     end;
 
     PROCEDURE Importe(): Decimal;
