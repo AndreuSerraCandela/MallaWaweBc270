@@ -574,8 +574,10 @@ page 50214 "JobLinesSub"
 
         END;
         Proyecto.Get(Rec."Job No.");
+        ListaEspera.Reset();
         ListaEspera.SetRange("Nº Recurso", Rec."No.");
         ListaEspera.SetRange(Motivo, ListaEspera.Motivo::"Lista de espera");
+        ListaEspera.SetRange(Orden, -99, 98);
         if ListaEspera.FindSet then Color := 'StandardAccent';
     end;
 

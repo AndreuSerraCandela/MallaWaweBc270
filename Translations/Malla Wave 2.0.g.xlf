@@ -6763,6 +6763,121 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table PermisosUsuario - Field Table ID - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3743729285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Planificación Fijación</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº mov.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 3593149998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha fijación</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Fecha fijación - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 3694579336 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha generación</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Fecha generación - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 99812791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha retirada</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Fecha Retirada - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 1398668058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fijar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Fijar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 3560088070 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Foto</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Foto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 174010921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Grupo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Grupo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 2289712846 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº Opis</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field No. Opis - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 8167848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº soportes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field No. Soportes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 814966011 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nombre</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Nombre - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 883629892 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Anunciante</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Nombre Comercial - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 1723447047 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº proyecto</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Nº Proyecto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 976230477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº recurso</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Nº Recurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 1354109807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Operario</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Operario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 1136275244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cód. comercial</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field SalesPerson Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 4269185658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tapar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Tapar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 1189577016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo Campaña</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Tipo Campaña - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 386948551 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo de Campaña</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Tipo de Campaña - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 1035954726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo soporte</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Tipo Soporte - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 1035954726 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,Opis,Vallas,Vallas Peatones,Indicadores</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Tipo Soporte - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 3687312408 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Validado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3743729285 - Field 467010782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Zona</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Planificación Fijación - Field Zona - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1982339789 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Plazos de facturación</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -25662,11 +25777,6 @@
           <source>VAT Cash Regime ant</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension VAT EntryKuara - Field VAT Cash Regime ant - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 3766906940 - Field 1353312013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4132487568">
-          <source>Clausula Exenta</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension VAT Posting SetupKuara - Field Clausula Exenta - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3766906940 - Field 3544532585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4132487568">
           <source>Emplazaminentos</source>

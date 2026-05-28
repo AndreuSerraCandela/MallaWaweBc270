@@ -54,7 +54,12 @@ page 50237 "Sel. proyectos a traspasar"
                                 rLinProy.SETRANGE("Job No.", rCabVenta."No.");
                                 if rLinProy.FINDFIRST THEN BEGIN
                                     REPEAT
-                                        rLinProy.VALIDATE(rLinProy."% Dto. Venta");
+                                        rLinProy.VALIDATE(rLinProy."Unit Price");
+                                        rLinProy."Direct Unit Cost (LCY)" := 0;
+                                        rLinProy."Unit Cost (LCY)" := 0;
+                                        rLinProy."Unit Cost" := 0;
+                                        rLinProy."Total Cost (LCY)" := 0;
+                                        rLinProy."Total Cost" := 0;
                                         rLinProy.MODIFY;
                                     UNTIL rLinProy.NEXT = 0;
                                 END;

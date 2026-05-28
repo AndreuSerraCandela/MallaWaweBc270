@@ -324,11 +324,9 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
         field(50035; "% Dto. Compra"; Decimal)
         {
             trigger OnValidate()
-            var
-                Currency: Record Currency;
             begin
                 if xRec."% Dto. Compra" <> "% Dto. Compra" then
-                    Validate("Unit Cost", "Unit Price");
+                    RecalcularCostesLineaProyecto();
             end;
         }
         field(50040; "% Dto. Venta"; Decimal)
@@ -350,6 +348,7 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
                 "Total Venta" := "Total Price";
                 "Line Amount" := "Line Amount" * (1 - "% Dto. Venta" / 100);
                 "Line Amount (LCY)" := "Total Cost (LCY)";
+                RecalcularCostesLineaProyecto();
             END;
         }
         field(50054; "% Dto. Venta 1"; Decimal)
@@ -386,6 +385,7 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
                 "Total Price" := ROUND(Quantity * "Unit Price" * (1 - "% Dto. Venta" / 100), Currency."Amount Rounding Precision");
                 "Line Amount" := "Line Amount" * (1 - "% Dto. Venta" / 100);
                 "Total Venta" := "Total Price";
+                RecalcularCostesLineaProyecto();
             end;
         }
         modify(Quantity)
@@ -398,9 +398,7 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
                 "Total Price" := ROUND(Quantity * "Unit Price" * (1 - "% Dto. Venta" / 100), Currency."Amount Rounding Precision");
                 "Line Amount" := "Line Amount" * (1 - "% Dto. Venta" / 100);
                 "Total Venta" := "Total Price";
-                "Total Cost (LCY)" := ROUND("Unit Cost (LCY)" * (1 - "% Dto. Compra" / 100) * Quantity, Currency."Amount Rounding Precision");
-                "Total Cost" := ROUND(Quantity * "Unit Cost" * (1 - "% Dto. Compra" / 100), Currency."Amount Rounding Precision");
-
+                RecalcularCostesLineaProyecto();
             end;
         }
         field(50041; "Soporte de"; Enum "Soporte de")
@@ -419,7 +417,7 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
             trigger OnValidate()
             begin
                 Validate("Unit Price", "Precio Tarifa" * (1 - "Dto. Tarifa" / 100));
-                Validate("Unit Cost", "Precio Tarifa");
+                RecalcularCostesLineaProyecto();
             end;
         }
         field(50053; "Dto. Tarifa"; Decimal)
@@ -427,6 +425,7 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
             trigger OnValidate()
             begin
                 Validate("Unit Price", "Precio Tarifa" * (1 - "Dto. Tarifa" / 100));
+                RecalcularCostesLineaProyecto();
             end;
         }
         field(50043; "Medio"; Code[20])
@@ -865,6 +864,25 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
         rSelf.SETRANGE("Origin Line No.", "Line No.");
         rSelf.DELETEALL;
     End;
+
+    procedure RecalcularCostesLineaProyecto()
+    var
+        Currency: Record Currency;
+        Cantidad: Decimal;
+    begin
+        "Unit Cost" := "Unit Price";
+        "Unit Cost (LCY)" := "Unit Cost";
+        "Direct Unit Cost (LCY)" := "Unit Cost";
+
+        Cantidad := Quantity;
+        if Cantidad = 0 then
+            Cantidad := 1;
+
+        "Total Cost" :=
+            Round("Unit Cost" * (1 - "% Dto. Compra" / 100) * Cantidad, Currency."Amount Rounding Precision");
+        "Total Cost (LCY)" :=
+            Round("Unit Cost (LCY)" * (1 - "% Dto. Compra" / 100) * Cantidad, Currency."Amount Rounding Precision");
+    end;
 
     PROCEDURE Mirar_Estado();
     var
