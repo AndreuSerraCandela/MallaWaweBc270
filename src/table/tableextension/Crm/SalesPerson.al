@@ -69,6 +69,19 @@ tableextension 80110 VendedoresKuara extends "Salesperson/Purchaser"
         {
 
         }
+        field(60113; "Pct. Facturado"; Decimal) { }
+        field(60114; "Pct. Pendiente"; Decimal) { }
+        field(60115; "Pct. Facturado Año Ant."; Decimal) { }
+        field(60116; "Pct. Pendiente Año Ant."; Decimal) { }
+        field(60117; "Contratos Count"; Integer) { }
+        field(60118; "Billing Cutoff Text"; Text[250]) { }
+        field(60119; "Last Updated"; DateTime) { }
+        field(60120; "Panel Medios Fact. Año"; Integer)
+        {
+            Caption = 'Panel Medios fact. año';
+            DataClassification = CustomerContent;
+            Editable = false;
+        }
 
     }
 }

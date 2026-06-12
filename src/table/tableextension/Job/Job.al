@@ -333,6 +333,13 @@ tableextension 80101 JobKuara extends "Job"
         }
 
 
+        field(60150; "Autorizado Dirección"; Boolean)
+        {
+            Caption = 'Autorizado Dirección';
+        }
+
+
+
     }
 
     var

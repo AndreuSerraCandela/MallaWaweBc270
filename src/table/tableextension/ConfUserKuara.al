@@ -80,6 +80,9 @@ tableextension 80133 ConfUserKuara extends "User Setup"
 
         }
         field(80021; "Empresa Facturas"; Text[30]) { }
+        //Mostrsr Pannel de Medios
+        field(80022; "Mostrar Pannel de Medios"; Boolean)
+        { }
         // field(92100; "URL Ocr"; Text[250])
         // {
         //     DataClassification = ToBeClassified;

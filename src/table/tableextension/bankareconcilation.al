@@ -9,5 +9,10 @@ tableextension 80200 "Bank Acc. Reconci.LineKuara" extends "Bank Acc. Reconcilia
         field(50001; "Tipo conciliación"; Enum "Tipo conciliación") { }
         field(50002; "Liq. por Id."; CODE[10]) { }
         field(50003; "Nº conciliación"; Integer) { }
+        field(51003; "Referencia 1"; Text[250])
+        { }
+        field(51004; "Referencia 2"; Text[250])
+        { }
+        field(50004; "Concepto Propio"; CODE[3]) { }
     }
 }

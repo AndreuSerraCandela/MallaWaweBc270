@@ -17,6 +17,7 @@ page 50235 "Tabla Tipo Recurso"
                 field(Tipo; Rec.Tipo) { ApplicationArea = All; }
                 field(Descripción; Rec.Descripción) { ApplicationArea = All; }
                 field("Cód. Departamento"; Rec."Cód. Departamento") { ApplicationArea = All; }
+                field("Tipo Comun"; Rec."Tipo Comun") { ApplicationArea = All; }
                 field("Cód. Principal"; Rec."Cód. Principal") { ApplicationArea = All; }
                 field("Asociar a emplazamiento"; Rec."Asociar a emplazamiento")
                 {

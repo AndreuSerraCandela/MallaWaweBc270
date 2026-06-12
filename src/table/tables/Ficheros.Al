@@ -37,6 +37,10 @@ table 50002 Ficheros
         }
         field(10; Id_Url; Integer)
         { }
+        field(11; Enviado; Boolean)
+        {
+            InitValue = false;
+        }
 
     }
     keys

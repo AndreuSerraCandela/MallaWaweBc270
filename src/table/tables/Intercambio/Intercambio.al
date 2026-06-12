@@ -23,7 +23,7 @@ table 7001118 Intercambio
                     "Search Name" := Name;
             END;
         }
-        field(3; "Search Name"; Code[50]) { Caption = 'Calsificación'; TableRelation = "Clasificación Intercambio"; }
+        field(3; "Search Name"; Code[50]) { Caption = 'Calsificación'; TableRelation = "Clasificación Intercambio" where("Tipo" = filter(Intercambio)); }
         field(4; "Name 2"; Text[50]) { Caption = 'Nombre 2'; }
         field(5; "Address"; Text[50]) { Caption = 'Dirección'; }
         field(6; "Address 2"; Text[50]) { Caption = 'Dirección 2'; }

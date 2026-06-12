@@ -6,6 +6,7 @@ table 7001114 Resource3
     Extensible = true;
     Caption = 'Resource3';
 
+
     fields
     {
         field(1; "No."; Code[20])

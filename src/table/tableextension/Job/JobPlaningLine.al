@@ -869,10 +869,17 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
     var
         Currency: Record Currency;
         Cantidad: Decimal;
+        Resource: Record Resource;
     begin
-        "Unit Cost" := "Unit Price";
-        "Unit Cost (LCY)" := "Unit Cost";
-        "Direct Unit Cost (LCY)" := "Unit Cost";
+        // Si es Recurso de Diferencte empresa
+        if Resource.Get("No.") then begin
+            if Resource."Empresa Origen" <> '' then begin
+                "Unit Cost" := "Unit Price";
+                "Unit Cost (LCY)" := "Unit Cost";
+                "Direct Unit Cost (LCY)" := "Unit Cost";
+            end;
+        end;
+
 
         Cantidad := Quantity;
         if Cantidad = 0 then

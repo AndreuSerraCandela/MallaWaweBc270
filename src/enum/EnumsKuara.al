@@ -817,6 +817,9 @@ Enum 7001152 "Extensiones Malla"
     value(11; "Task Malla") { }
     value(12; Informes) { }
     value(13; DropBox) { }
+    value(14; "Funciones") { }
+    value(15; "AIbc") { }
+    value(16; "MgtExt") { }
 }
 Enum 7001165 "Id Extensiones Malla"
 {
@@ -834,6 +837,9 @@ Enum 7001165 "Id Extensiones Malla"
     value(11; "366AC4B9-199A-4725-A5F2-9BEAD2FE08B5") { }	//Task Malla
     value(12; "80666C65-3038-42BD-932A-AF8BA6E6F216") { }//	Informes
     value(13; "97DCB0C2-10E0-4848-A938-474D3183D943") { }//	DropBox
+    value(14; "43635513-CB1D-447C-BC2B-A8495E96A0b7") { }//	Funciones
+    value(15; "ED0103E4-20B3-4D3E-95F0-E07F97D07536") { }//	AIbc
+    value(16; "ACA4FBD0-3903-4BD8-9E5E-3552365F0B37") { }//	MgtExt
 
 }
 Enum 7001164 Duracion
