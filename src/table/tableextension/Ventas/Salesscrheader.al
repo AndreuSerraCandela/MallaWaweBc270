@@ -96,5 +96,6 @@ tableextension 80171 "Sales Cr.Memo HeaderKuara" extends "Sales Cr.Memo Header"
         //     Caption = 'Importe retención (IRPF)';
         //     Editable = false;
         // }
+        field(50208; "E-Mail-Facturación"; Text[250]) { }
     }
 }

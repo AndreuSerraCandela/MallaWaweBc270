@@ -47,5 +47,10 @@ tableextension 80273 "EmployeeKuara" extends "Employee"
             ObsoleteState = Removed;
             Caption = 'NiF';
         }
+        field(80018; "UserGtask"; Text[250])
+        {
+            DataClassification = ToBeClassified;
+        }
+
     }
 }

@@ -21,6 +21,14 @@ table 7001165 "Partes de Trabajo"
         field(5; "Horas"; Decimal) { }
         field(6; "Empresa"; Text[30]) { TableRelation = Company; }
         field(7; "Texto Trabajo"; Text[250]) { }
+        field(50001; Empleado; Code[20])
+        {
+            Caption = 'Empleado';
+            DataClassification = CustomerContent;
+            TableRelation = Employee."No.";
+
+
+        }
     }
     KEYS
     {

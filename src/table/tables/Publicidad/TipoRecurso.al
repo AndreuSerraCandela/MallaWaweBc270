@@ -76,7 +76,7 @@ table 7001101 "Tipo Recurso"
             DataClassification = ToBeClassified;
         }
         //Tipo Comun
-        field(14; "Tipo Comun"; Code[10])
+        field(14; "Tipo Comun"; Code[20])
         {
             Caption = 'Tipo Comun';
             DataClassification = ToBeClassified;
@@ -93,11 +93,19 @@ table 7001101 "Tipo Recurso"
             trigger OnValidate()
             var
                 TipoRecurso: Record "Tipo Recurso";
+                Empresas: record Company;
             BEGIN
                 //Busca especificamente en la empresa Malla Publicidad
                 TipoRecurso.ChangeCompany('Malla Publicidad');
-                If Not TipoRecurso.Get(Rec."Tipo Comun") then
-                    ERROR('El Tipo Comun no existe');
+                If xRec."Tipo Comun" = '' Then
+                    If Not TipoRecurso.Get(Rec."Tipo Comun") then
+                        ERROR('El Tipo Comun debe existir como Tipo en Malla Publicidad, una vez ceado, puede modificarlo');
+                if empresas.findset then
+                    repeat
+                        TipoRecurso.changecompany(empresas.name);
+                        TipoRecurso.SetRange("Tipo Comun", xRec."Tipo Comun");
+                        TipoRecurso.ModifyAll("Tipo Comun", Rec."Tipo Comun");
+                    until empresas.next = 0;
             END;
         }
     }

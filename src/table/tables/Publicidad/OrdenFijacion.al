@@ -370,7 +370,7 @@ table 7001208 "Imagenes Orden fijación"
     DataCaptionFields = "Nº Orden";
     fields
     {
-        field(1; "Nº Orden"; Integer) { Description = 'PK'; TableRelation = "Cab Orden fijación"."Nº Orden"; }
+        field(1; "Nº Orden"; Integer) { Description = 'PK'; TableRelation = "Cab Orden fijación"."Nº Orden"; ValidateTableRelation = false; }
         field(5; "Nº Imagen"; Integer)
         {
 

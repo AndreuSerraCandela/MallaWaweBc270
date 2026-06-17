@@ -126,6 +126,7 @@ tableextension 80169 "Sales Invoice HeaderKuara" extends "Sales Invoice Header"
             Caption = 'Anunciante';
             TableRelation = "Nombre Comercial".Nombre;
         }
+        field(50208; "E-Mail-Facturación"; Text[250]) { }
     }
 }
 

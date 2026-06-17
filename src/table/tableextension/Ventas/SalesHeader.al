@@ -745,6 +745,8 @@ tableextension 80102 SalesHeaderKuara extends "Sales Header"
         }
         field(50207; "Imprimir Parte"; Boolean)
         { }
+        //Correo electronico facturacion
+        field(50208; "E-Mail-Facturación"; Text[250]) { }
 
     }
 
