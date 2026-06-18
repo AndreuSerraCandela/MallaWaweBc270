@@ -1098,6 +1098,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Campañas a retirar - Field Observaciones - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 881815777 - Field 1035954726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo soporte</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Campañas a retirar - Field Tipo Soporte - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 881815777 - Field 1035954726 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,Opis,Vallas,Vallas Peatones,Indicadores</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Campañas a retirar - Field Tipo Soporte - Property OptionCaption</note>
+        </trans-unit>
         <trans-unit id="Table 881815777 - Field 4128707616 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tirar</source>
           <note from="Developer" annotates="general" priority="2"></note>

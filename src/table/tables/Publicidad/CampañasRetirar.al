@@ -30,6 +30,13 @@ table 50014 "Campañas a retirar"
         {
             Caption = 'Observaciones';
         }
+        //Tipo Soporte
+        field(6;  "Tipo Soporte"; Option)
+        {
+            Caption = 'Tipo soporte';
+            OptionMembers = " ",Opis,Vallas,"Vallas Peatones",Indicadores;
+            OptionCaption = ' ,Opis,Vallas,Vallas Peatones,Indicadores';
+        }
     }
 
     keys

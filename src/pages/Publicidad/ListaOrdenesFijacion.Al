@@ -616,6 +616,7 @@ page 7001179 "Imagenes Orden fijacion"
     trigger OnNewRecord(BelowxRec: Boolean)
     begin
         Rec."Nombre" := SelectFileTxt;
+        Rec."Es Incidencia" := EsIncidencia;
     end;
 
     var
