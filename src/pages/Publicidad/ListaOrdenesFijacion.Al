@@ -288,6 +288,7 @@ page 7001178 "SubPage ordenes fijación"
 {
     PageType = ListPart;
     SourceTable = "Orden fijación";
+    SourceTableView = sorting(Zona);
     layout
     {
         area(Content)
