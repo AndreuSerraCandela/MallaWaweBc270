@@ -120,6 +120,7 @@ table 7001199 Reserva
         field(52031; "Sin Cargo"; Boolean) { }
         field(52032; Seleccionar; Boolean) { }
         field(52033; Refijar; Boolean) { }
+        field(52034; "IDX"; Integer) { }
 
     }
     KEYS

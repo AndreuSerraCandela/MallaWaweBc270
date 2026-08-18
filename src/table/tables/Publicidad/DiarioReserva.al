@@ -115,6 +115,7 @@ table 7001201 "Diario Reserva"
         {
             //Activo,Inactivo
         }
+        field(50018; "IDX"; Integer) { }
     }
     KEYS
     {

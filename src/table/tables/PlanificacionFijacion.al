@@ -104,6 +104,10 @@ table 50016 "Planificación Fijación"
         {
             Caption = 'Nº soportes';
         }
+        field(67; Observaciones; Text[250])
+        {
+            Caption = 'Observaciones';
+        }
     }
 
     keys

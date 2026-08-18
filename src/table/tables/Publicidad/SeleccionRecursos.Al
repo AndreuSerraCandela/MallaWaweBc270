@@ -57,6 +57,8 @@ table 7001154 SeleccionRecursos
         field(50009; Image; Media) { }
         field(50010; UserId; Text[30]) { }
         field(50011; Municipio; Code[15]) { }
+        //IDX
+        field(50012; "IDX"; Integer) { }
 
     }
 

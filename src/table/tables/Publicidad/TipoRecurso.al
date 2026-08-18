@@ -108,6 +108,11 @@ table 7001101 "Tipo Recurso"
                     until empresas.next = 0;
             END;
         }
+        field(15; "Reparto todas las reservas"; Boolean)
+        {
+            Caption = 'Reparto a todas las reservas';
+            DataClassification = CustomerContent;
+        }
     }
     keys
     {

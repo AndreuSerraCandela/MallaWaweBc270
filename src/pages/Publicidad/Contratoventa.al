@@ -1388,6 +1388,15 @@ page 50209 "Ficha Contrato Venta"
         }
         area(factboxes)
         {
+            part(Control1906127307; "Sales Line FactBox")
+            {
+                Caption = 'Detalle Líneas';
+                ApplicationArea = Suite;
+                Provider = SalesLines;
+                SubPageLink = "Document Type" = FIELD("Document Type"),
+                              "Document No." = FIELD("Document No."),
+                              "Line No." = FIELD("Line No.");
+            }
             part(Control1903433807; "Cartera Receiv. Statistics FB")
             {
                 Caption = 'Cartera';
@@ -1439,15 +1448,7 @@ page 50209 "Ficha Contrato Venta"
                 ApplicationArea = Basic, Suite;
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
             }
-            part(Control1906127307; "Sales Line FactBox")
-            {
-                Caption = 'Detalle Líneas';
-                ApplicationArea = Suite;
-                Provider = SalesLines;
-                SubPageLink = "Document Type" = FIELD("Document Type"),
-                              "Document No." = FIELD("Document No."),
-                              "Line No." = FIELD("Line No.");
-            }
+
             part(Control1901314507; "Item Invoicing FactBox")
             {
                 Caption = 'Detalle Producto';

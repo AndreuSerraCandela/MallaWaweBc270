@@ -133,6 +133,11 @@ page 50215 "Tabla Reservas"
                     ApplicationArea = All;
                     Editable = Not Seleccion;
                 }
+                field("IDX"; Rec."IDX")
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                }
 
 
             }

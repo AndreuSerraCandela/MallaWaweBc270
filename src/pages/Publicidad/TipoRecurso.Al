@@ -55,6 +55,11 @@ page 50235 "Tabla Tipo Recurso"
                 {
                     ApplicationArea = All;
                 }
+                field("Reparto todas las reservas"; Rec."Reparto todas las reservas")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Indica que los recursos de producción de este tipo se reparten entre todas las reservas del proyecto, sin filtrar por tipo de recurso.';
+                }
             }
         }
     }
@@ -137,9 +142,49 @@ page 50235 "Tabla Tipo Recurso"
                         END;
                     END;
                 }
+                action("Trasladar reparto a empresas")
+                {
+                    Caption = 'Trasladar reparto a todas las empresas';
+                    Image = Copy;
+                    ApplicationArea = All;
+                    ToolTip = 'Copia el valor de Reparto a todas las reservas del tipo seleccionado a todas las empresas donde exista el mismo tipo.';
+
+                    trigger OnAction()
+                    begin
+                        TrasladarRepartoTodasEmpresas();
+                    end;
+                }
             }
         }
     }
 
+    local procedure TrasladarRepartoTodasEmpresas()
+    var
+        Empresa: Record Company;
+        TipoRecursoDestino: Record "Tipo Recurso";
+        Actualizados: Integer;
+        NoEncontrados: Integer;
+    begin
+        Rec.TestField(Tipo);
+        if not Confirm(
+            '¿Desea trasladar el valor %1 de "Reparto a todas las reservas" para el tipo %2 a todas las empresas?',
+            false, Rec."Reparto todas las reservas", Rec.Tipo)
+        then
+            exit;
 
+        if Empresa.FindSet() then
+            repeat
+                TipoRecursoDestino.ChangeCompany(Empresa.Name);
+                if TipoRecursoDestino.Get(Rec.Tipo) then begin
+                    TipoRecursoDestino."Reparto todas las reservas" := Rec."Reparto todas las reservas";
+                    TipoRecursoDestino.Modify();
+                    Actualizados += 1;
+                end else
+                    NoEncontrados += 1;
+            until Empresa.Next() = 0;
+
+        Message(
+            'Valor trasladado a %1 empresas. El tipo %2 no existe en %3 empresas.',
+            Actualizados, Rec.Tipo, NoEncontrados);
+    end;
 }
