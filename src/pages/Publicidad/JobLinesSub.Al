@@ -110,61 +110,14 @@ page 50214 "JobLinesSub"
                 {
                     ApplicationArea = all;
                 }
-                field("Sin Producción"; Rec."Sin Producción")
-                {
-                    ApplicationArea = all;
-                    Visible = MaterialVisibele;
-                }
-                field("Solo Producción"; Rec."Solo Producción")
-                {
-                    ApplicationArea = all;
-                    Visible = MaterialVisibele;
-                    trigger OnValidate()
-                    begin
-                        if Rec."Solo Producción" Then
-                            CurrPage.Update(false);
-                    end;
-                }
-                field(Cartel; Rec.Cartel)
-                {
-                    ApplicationArea = all;
-                    Visible = MaterialVisibele;
-                    trigger OnValidate()
-                    begin
-                        if Rec.Cartel Then
-                            CurrPage.Update(false);
-                    end;
-                }
-                field(Lona; Rec.Lona)
-                {
-                    ApplicationArea = all;
-                    Visible = MaterialVisibele;
-                    trigger OnValidate()
-                    begin
-                        if Rec.Lona Then
-                            CurrPage.Update(false);
-                    end;
-                }
-                field(Vinilo; Rec.Vinilo)
-                {
-                    ApplicationArea = all;
-                    Visible = MaterialVisibele;
-                    trigger OnValidate()
-                    begin
-                        if Rec.Vinilo Then
-                            CurrPage.Update(false);
-                    end;
-                }
-                field(Otros; Rec.Otros)
-                {
-                    ApplicationArea = all;
-                    Visible = MaterialVisibele;
-                    trigger OnValidate()
-                    begin
-                        if Rec.Otros Then
-                            CurrPage.Update(false);
-                    end;
-                }
+                // field(LineaProduccion; Rec.LineaProduccion)
+                // {
+                //     ApplicationArea = all;
+                // }
+                // field("Es Produccion"; Rec."Es Produccion")
+                // {
+                //     ApplicationArea = all;
+                // }
 
                 field("Shortcut Dimension 1 Code"; Rec."Shortcut Dimension 1 Code")
                 {
@@ -539,15 +492,6 @@ page 50214 "JobLinesSub"
         Text001: Label 'Debe introducir a menos un filtro de fecha para acceder a la consulta';
         Color: Text;
         Text002: Label 'Filtrando líneas proyecto #1########';
-        MaterialVisibele: Boolean;
-
-    trigger OnOpenPage()
-    var
-        JobsSetup: Record "Jobs Setup";
-    begin
-        JobsSetup.Get();
-        MaterialVisibele := JobsSetup."Nuevo sistema producción";
-    end;
 
     trigger OnAfterGetRecord()
     var

@@ -45,6 +45,10 @@ tableextension 80177 "Purch. Cr. Memo Hdr.Kuara" extends "Purch. Cr. Memo Hdr."
         field(80010; "Fecha/hora subida fichero SII"; DateTime) { }
         field(80011; "Estado"; TEXT[30]) { }
         field(80012; "Reportado SII primer semestre"; Boolean) { }
+        field(80103; "Empresa Factura"; Text[30])
+        {
+
+        }
         // field(95000; "Retention Group Code (GE)"; Code[20])
         // {
         //     ObsoleteState = Removed;

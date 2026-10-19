@@ -231,8 +231,8 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
                 if Rec."Crear pedidos" in [Rec."Crear pedidos"::"De venta", Rec."Crear pedidos"::"De Compra Y De Venta"] then
                     Rec."Imprmir en Contrato/Factura" := true else
                     Rec."Imprmir en Contrato/Factura" := false;
-                if Rec."Crear pedidos" = Rec."Crear pedidos"::"No crear pedido" then
-                    Rec."Sin Producción" := true;
+                //if Rec."Crear pedidos" = Rec."Crear pedidos"::"No crear pedido" then
+                //  Rec."Sin Producción" := true;
             END;
 
         }
@@ -636,41 +636,42 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
         }
         field(50038; Cartel; Boolean)
         {
-
+            ObsoleteState = Removed;
+            ObsoleteReason = 'No se usa';
         }
         field(50039; Lona; Boolean)
         {
-
+            ObsoleteState = Removed;
+            ObsoleteReason = 'No se usa';
         }
         field(50034; Vinilo; Boolean)
         {
-
+            ObsoleteState = Removed;
+            ObsoleteReason = 'No se usa';
         }
         field(50033; Otros; Boolean)
         {
-
+            ObsoleteState = Removed;
+            ObsoleteReason = 'No se usa';
         }
         field(50029; "Sin Producción"; Boolean)
         {
-            trigger OnValidate()
-            begin
-                If "Sin Producción" then
-                    Cartel := false;
-                Lona := false;
-                Vinilo := false;
-                Otros := false;
-            end;
+            ObsoleteState = Removed;
+            ObsoleteReason = 'No se usa';
         }
         field(50056; "Solo Producción"; Boolean)
         {
-
+            ObsoleteState = Removed;
+            ObsoleteReason = 'No se usa';
         }
         field(50057; LineaProduccion; RecordId)
         {
+
         }
         field(50058; "Es Produccion"; Boolean)
         {
-
+            ObsoleteState = Pending;
+            ObsoleteReason = 'No se usa';
         }
         field(50059; "Total Venta"; Decimal)
         {
@@ -901,8 +902,8 @@ tableextension 80104 JobPlaningKuara extends "Job Planning Line"
                 Res.TESTFIELD(Blocked, FALSE);
             If Not Tipo.GET(Res."Tipo Recurso") THEN
                 Tipo.Init();
-            If Not ((Res."Recurso Agrupado") Or (Tipo."Crea Reservas")) THEN
-                Rec."Sin Producción" := TRUE;
+            //If Not ((Res."Recurso Agrupado") Or (Tipo."Crea Reservas")) THEN
+            //Rec."Sin Producción" := TRUE;
             if Rec."Recurso Agrupado" then exit;
             if Res."Producción" then exit;
             if Not Tipo."Crea Reservas" then exit;

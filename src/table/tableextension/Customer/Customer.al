@@ -94,12 +94,10 @@ tableextension 80107 ClienteKuara extends "Customer"
         }
         field(50030; "Fecha ult movimiento"; Date)
         {
-            FieldClass = FlowField;
-            CalcFormula = Max("G/L Entry"."Posting Date" WHERE("Source Type" = CONST(Customer),
-                                                    "Source No." = FIELD("No."),
-                                                    "G/L Account No." = FILTER('4300..4301:|4370..4370:')));
             Caption = 'Fecha Último movimiento';
             Description = '$001';
+            Editable = false;
+            DataClassification = CustomerContent;
         }
         field(50031; "Fecha ult factura"; Date)
         {

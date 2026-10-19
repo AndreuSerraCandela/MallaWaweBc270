@@ -103,7 +103,7 @@ table 7001101 "Tipo Recurso"
                 if empresas.findset then
                     repeat
                         TipoRecurso.changecompany(empresas.name);
-                        TipoRecurso.SetRange("Tipo Comun", xRec."Tipo Comun");
+                        TipoRecurso.SetRange(Tipo, Rec.Tipo);
                         TipoRecurso.ModifyAll("Tipo Comun", Rec."Tipo Comun");
                     until empresas.next = 0;
             END;

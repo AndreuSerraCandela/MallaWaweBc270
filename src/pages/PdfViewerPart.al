@@ -32,26 +32,19 @@ page 7001171 "PDF Viewer Part"
     {
         area(Processing)
         {
-            action(Ampliar)
-            {
-                Caption = 'Ampliar';
-                Image = Find;
-                ApplicationArea = ALL;
-                // Promoted = true;
-                // PromotedIsBig = true;
-                trigger OnAction()
-                var
-                    myInt: Integer;
-                    Pagina: Page "Pdf Viewer";
-                begin
-
-                    Pagina.LoadPdfFromBlob(Content);
-
-                    Pagina.Run();
-
-
-                end;
-            }
+            // action(Ampliar)
+            // {
+            //     Caption = 'Ampliar';
+            //     Image = Find;
+            //     ApplicationArea = ALL;
+            //     trigger OnAction()
+            //     var
+            //         Pagina: Page "Pdf Viewer";
+            //     begin
+            //         Pagina.LoadPdfFromBlob(Content);
+            //         Pagina.Run();
+            //     end;
+            // }
 
 
             action(Anterior)

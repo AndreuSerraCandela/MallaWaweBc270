@@ -350,6 +350,10 @@ tableextension 80275 Reversal extends "Reversal Entry"
             If not Confirm(PeriodoBloqueado, true, POSTINGDATE)
 Then
                 Error(ProcesoCancelado);
+        //Si la fecha esta bloqueada exit(workdate)
+        if c11.DateNotAllowed(POSTINGDATE) then
+            EXIT(WORKDATE);
+
         if DATE2DMY(POSTINGDATE, 3) > DATE2DMY(WORKDATE, 3) THEN EXIT(POSTINGDATE);
         if DATE2DMY(POSTINGDATE, 3) < DATE2DMY(WORKDATE, 3) THEN EXIT(WORKDATE);
         if DATE2DMY(POSTINGDATE, 3) = DATE2DMY(WORKDATE, 3) THEN begin

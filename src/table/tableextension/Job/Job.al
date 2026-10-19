@@ -337,10 +337,20 @@ tableextension 80101 JobKuara extends "Job"
         {
             Caption = 'Autorizado Dirección';
         }
-
-
+        field(60151; "Assigned User ID"; Code[50])
+        {
+            Caption = 'Id. usuario asignado';
+            DataClassification = EndUserIdentifiableInformation;
+            TableRelation = "User Setup";
+        }
 
     }
+
+    trigger OnInsert()
+    begin
+        if "Assigned User ID" = '' then
+            "Assigned User ID" := UserId();
+    end;
 
     var
         myInt: Integer;

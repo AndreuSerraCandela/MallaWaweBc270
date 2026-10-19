@@ -400,14 +400,18 @@ page 50208 "Lista Contratos Venta"
                 trigger OnAction()
                 VAR
                     rContratos: Record 36;
+                    rContrato: Record 36;
                 BEGIN
                     CurrPage.SETSELECTIONFILTER(rContratos);
-                    if rContratos.FINDFIRST THEN
+                    rContratos.MARKEDONLY(FALSE);
+                    if rContratos.FINDSET THEN
                         REPEAT
-                            rContratos."Enviado a dirección" := NOT rContratos."Enviado a Dirección";
-                            rContratos."Marcar Para Renovar" := Not rContratos."Marcar Para Renovar";
-                            rContratos.MODIFY;
+                            rContrato.GET(rContratos."Document Type", rContratos."No.");
+                            rContrato."Enviado a dirección" := TRUE;
+                            rContrato."Marcar Para Renovar" := TRUE;
+                            rContrato.MODIFY;
                         UNTIL rContratos.NEXT = 0;
+                    CurrPage.UPDATE(FALSE);
                 END;
 
             }

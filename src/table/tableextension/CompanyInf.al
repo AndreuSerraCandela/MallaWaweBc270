@@ -1204,7 +1204,7 @@ tableextension 80108 EmpresaKuara extends "Company Information"
             '2052':
                 EXIT('CECAESMM52');
             '2056':
-                EXIT('CECAESMM56');
+                EXIT('CECAESMM056');
             '2059':
                 EXIT('CECAESMM59');
             '2066':
@@ -1368,7 +1368,7 @@ tableextension 80108 EmpresaKuara extends "Company Information"
             '3138':
                 EXIT('BCOEESMM138');
             '3140':
-                EXIT('BCOEESMM14');
+                EXIT('CGUIESBAXXX');// Antiguo BCOEESMM14
             '3144':
                 EXIT('BCOEESMM144');
             '3146':

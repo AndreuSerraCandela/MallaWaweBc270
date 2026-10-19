@@ -15703,25 +15703,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ocr Viewer Part - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3125548572 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Pdf Viewer</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Pdf Viewer - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3125548572 - Action 892210059 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Ver</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Pdf Viewer - Action Ver - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3617064313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>PDF Viewer</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page PDF Viewer Part - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3617064313 - Action 2869390134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Ampliar</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page PDF Viewer Part - Action Ampliar - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3617064313 - Action 277502140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Anterior</source>
@@ -19993,6 +19978,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field Antiguo proyecto original - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3772534253 - Field 3294270728 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
+          <source>Id. usuario asignado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobKuara - Field Assigned User ID - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3772534253 - Field 928571590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2818324089">
           <source>Autorizado Dirección</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -20243,11 +20233,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field Calculo Recurso Agrupado - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 2222638876 - Field 2580065807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
-          <source>Cartel</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field Cartel - Property Caption</note>
-        </trans-unit>
         <trans-unit id="TableExtension 2222638876 - Field 1231040125 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
           <source>Cdad. a Reservar</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -20328,11 +20313,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field LineaProduccion - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 2222638876 - Field 661422824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
-          <source>Lona</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field Lona - Property Caption</note>
-        </trans-unit>
         <trans-unit id="TableExtension 2222638876 - Field 1731902013 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
           <source>Medidas</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -20367,11 +20347,6 @@
           <source>Origin Line No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field Origin Line No. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 2222638876 - Field 1972568807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
-          <source>Otros</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field Otros - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2222638876 - Field 1538302221 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
           <source>Precio Tarifa</source>
@@ -20428,16 +20403,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field Shortcut Dimension 5 Code - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 2222638876 - Field 2651872192 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
-          <source>Sin Producción</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field Sin Producción - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 2222638876 - Field 2102801281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
-          <source>Solo Producción</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field Solo Producción - Property Caption</note>
-        </trans-unit>
         <trans-unit id="TableExtension 2222638876 - Field 918462475 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
           <source>Soporte de</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -20482,11 +20447,6 @@
           <source>Total Venta</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field Total Venta - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 2222638876 - Field 435302437 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
-          <source>Vinilo</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JobPlaningKuara - Field Vinilo - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3440420937 - Field 389740846 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2556642749">
           <source>Clausula Buses</source>
@@ -21502,6 +21462,11 @@
           <source>Emplazamiento</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purch. Cr. Memo Hdr.Kuara - Field Emplazamiento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 97462797 - Field 3206541157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Empresa Factura</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Purch. Cr. Memo Hdr.Kuara - Field Empresa Factura - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 97462797 - Field 2950845476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
           <source>Estado</source>
